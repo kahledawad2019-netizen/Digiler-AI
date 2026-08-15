@@ -1,3 +1,4 @@
+
 # Digiler AI
 
 **Adaptive AI Learning Assistant with Hybrid RAG, GraphRAG, Multimodal Retrieval, and Personalized Learning.**
@@ -10,7 +11,7 @@ language model runs entirely on a **local Ollama server** (default `qwen3`); no 
 LLM APIs are required.
 
 ---
-
+<img width="800" height="430" alt="ezgif com-video-to-gif-converter (2)" src="https://github.com/user-attachments/assets/5ad13458-6ddd-4381-8025-fcf25440b199" />
 ## 1. Overview
 
 Most "chat with your PDFs" tools hallucinate, cite nothing, and treat every learner the
