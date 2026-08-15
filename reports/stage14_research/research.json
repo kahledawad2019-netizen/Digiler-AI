@@ -1,0 +1,456 @@
+{
+  "confidence_gate": {
+    "in_corpus_mean": 0.7688,
+    "out_corpus_mean": 0.6043,
+    "gap": 0.1645,
+    "gate_accuracy": 0.9,
+    "separation_auc": 0.96,
+    "in_needs_research_rate": 0.1,
+    "out_needs_research_rate": 0.9,
+    "threshold": 0.7,
+    "in_scores": [
+      0.7633,
+      0.7438,
+      0.9366,
+      0.7107,
+      0.7502,
+      0.7235,
+      0.6557,
+      0.9637,
+      0.7161,
+      0.7249
+    ],
+    "out_scores": [
+      0.6548,
+      0.7037,
+      0.6119,
+      0.6266,
+      0.6186,
+      0.692,
+      0.6792,
+      0.6215,
+      0.6784,
+      0.1564
+    ],
+    "detail": {
+      "in_corpus": [
+        {
+          "q": "what is a convolutional neural network",
+          "score": 0.7633,
+          "level": "high",
+          "needs_research": false,
+          "signals": {
+            "semantic": 0.8969,
+            "bm25": 1.0,
+            "agreement": 0.4,
+            "graph": 1.0,
+            "citation": 1.0,
+            "support": 1.0,
+            "n_supporting": 5,
+            "top_bm25_raw": 22.187
+          }
+        },
+        {
+          "q": "explain gradient descent",
+          "score": 0.7438,
+          "level": "high",
+          "needs_research": false,
+          "signals": {
+            "semantic": 0.8968,
+            "bm25": 0.8702,
+            "agreement": 0.4,
+            "graph": 1.0,
+            "citation": 1.0,
+            "support": 1.0,
+            "n_supporting": 5,
+            "top_bm25_raw": 19.144
+          }
+        },
+        {
+          "q": "what is a foreign key in a relational database",
+          "score": 0.9366,
+          "level": "high",
+          "needs_research": false,
+          "signals": {
+            "semantic": 0.8847,
+            "bm25": 1.0,
+            "agreement": 1.0,
+            "graph": 1.0,
+            "citation": 1.0,
+            "support": 0.2,
+            "n_supporting": 1,
+            "top_bm25_raw": 24.652
+          }
+        },
+        {
+          "q": "how does k-means clustering work",
+          "score": 0.7107,
+          "level": "medium",
+          "needs_research": false,
+          "signals": {
+            "semantic": 0.9345,
+            "bm25": 0.6447,
+            "agreement": 0.3333,
+            "graph": 1.0,
+            "citation": 1.0,
+            "support": 0.6,
+            "n_supporting": 3,
+            "top_bm25_raw": 14.183
+          }
+        },
+        {
+          "q": "what is a probability distribution",
+          "score": 0.7502,
+          "level": "high",
+          "needs_research": false,
+          "signals": {
+            "semantic": 0.9246,
+            "bm25": 0.6113,
+            "agreement": 0.5,
+            "graph": 1.0,
+            "citation": 1.0,
+            "support": 0.4,
+            "n_supporting": 2,
+            "top_bm25_raw": 13.448
+          }
+        },
+        {
+          "q": "explain overfitting and regularization",
+          "score": 0.7235,
+          "level": "high",
+          "needs_research": false,
+          "signals": {
+            "semantic": 0.9182,
+            "bm25": 0.9566,
+            "agreement": 0.25,
+            "graph": 1.0,
+            "citation": 1.0,
+            "support": 0.8,
+            "n_supporting": 4,
+            "top_bm25_raw": 21.046
+          }
+        },
+        {
+          "q": "what is a random forest",
+          "score": 0.6557,
+          "level": "medium",
+          "needs_research": true,
+          "signals": {
+            "semantic": 0.8684,
+            "bm25": 0.6869,
+            "agreement": 0.25,
+            "graph": 1.0,
+            "citation": 1.0,
+            "support": 0.8,
+            "n_supporting": 4,
+            "top_bm25_raw": 15.112
+          }
+        },
+        {
+          "q": "how does backpropagation train a neural network",
+          "score": 0.9637,
+          "level": "high",
+          "needs_research": false,
+          "signals": {
+            "semantic": 0.934,
+            "bm25": 1.0,
+            "agreement": 1.0,
+            "graph": 1.0,
+            "citation": 1.0,
+            "support": 0.2,
+            "n_supporting": 1,
+            "top_bm25_raw": 22.725
+          }
+        },
+        {
+          "q": "what is a p-value in hypothesis testing",
+          "score": 0.7161,
+          "level": "medium",
+          "needs_research": false,
+          "signals": {
+            "semantic": 0.9067,
+            "bm25": 0.7828,
+            "agreement": 0.3333,
+            "graph": 1.0,
+            "citation": 1.0,
+            "support": 0.6,
+            "n_supporting": 3,
+            "top_bm25_raw": 17.222
+          }
+        },
+        {
+          "q": "explain the bias variance tradeoff",
+          "score": 0.7249,
+          "level": "high",
+          "needs_research": false,
+          "signals": {
+            "semantic": 0.9089,
+            "bm25": 1.0,
+            "agreement": 0.25,
+            "graph": 1.0,
+            "citation": 1.0,
+            "support": 0.8,
+            "n_supporting": 4,
+            "top_bm25_raw": 22.391
+          }
+        }
+      ],
+      "out_corpus": [
+        {
+          "q": "how do I bake sourdough bread at home",
+          "score": 0.6548,
+          "level": "medium",
+          "needs_research": true,
+          "signals": {
+            "semantic": 0.813,
+            "bm25": 0.7177,
+            "agreement": 0.3333,
+            "graph": 1.0,
+            "citation": 1.0,
+            "support": 0.6,
+            "n_supporting": 3,
+            "top_bm25_raw": 15.789
+          }
+        },
+        {
+          "q": "what year did the western roman empire fall",
+          "score": 0.7037,
+          "level": "medium",
+          "needs_research": false,
+          "signals": {
+            "semantic": 0.7781,
+            "bm25": 0.8386,
+            "agreement": 0.5,
+            "graph": 1.0,
+            "citation": 1.0,
+            "support": 0.4,
+            "n_supporting": 2,
+            "top_bm25_raw": 18.449
+          }
+        },
+        {
+          "q": "what is the offside rule in football",
+          "score": 0.6119,
+          "level": "medium",
+          "needs_research": true,
+          "signals": {
+            "semantic": 0.8037,
+            "bm25": 0.6326,
+            "agreement": 0.25,
+            "graph": 0.963,
+            "citation": 1.0,
+            "support": 0.8,
+            "n_supporting": 4,
+            "top_bm25_raw": 13.918
+          }
+        },
+        {
+          "q": "how do I change a flat car tire",
+          "score": 0.6266,
+          "level": "medium",
+          "needs_research": true,
+          "signals": {
+            "semantic": 0.8246,
+            "bm25": 0.6538,
+            "agreement": 0.25,
+            "graph": 0.963,
+            "citation": 1.0,
+            "support": 0.8,
+            "n_supporting": 4,
+            "top_bm25_raw": 14.383
+          }
+        },
+        {
+          "q": "what is the capital city of Australia",
+          "score": 0.6186,
+          "level": "medium",
+          "needs_research": true,
+          "signals": {
+            "semantic": 0.8053,
+            "bm25": 0.6713,
+            "agreement": 0.25,
+            "graph": 1.0,
+            "citation": 1.0,
+            "support": 0.8,
+            "n_supporting": 4,
+            "top_bm25_raw": 14.768
+          }
+        },
+        {
+          "q": "recipe for chocolate chip cookies",
+          "score": 0.692,
+          "level": "medium",
+          "needs_research": true,
+          "signals": {
+            "semantic": 0.849,
+            "bm25": 1.0,
+            "agreement": 0.25,
+            "graph": 1.0,
+            "citation": 1.0,
+            "support": 0.8,
+            "n_supporting": 4,
+            "top_bm25_raw": 31.621
+          }
+        },
+        {
+          "q": "how tall is mount everest in metres",
+          "score": 0.6792,
+          "level": "medium",
+          "needs_research": true,
+          "signals": {
+            "semantic": 0.8015,
+            "bm25": 0.589,
+            "agreement": 0.5,
+            "graph": 1.0,
+            "citation": 1.0,
+            "support": 0.4,
+            "n_supporting": 2,
+            "top_bm25_raw": 12.957
+          }
+        },
+        {
+          "q": "who painted the mona lisa",
+          "score": 0.6215,
+          "level": "medium",
+          "needs_research": true,
+          "signals": {
+            "semantic": 0.7935,
+            "bm25": 0.5673,
+            "agreement": 0.3333,
+            "graph": 1.0,
+            "citation": 1.0,
+            "support": 0.6,
+            "n_supporting": 3,
+            "top_bm25_raw": 12.481
+          }
+        },
+        {
+          "q": "what are the rules of chess",
+          "score": 0.6784,
+          "level": "medium",
+          "needs_research": true,
+          "signals": {
+            "semantic": 0.8591,
+            "bm25": 0.7062,
+            "agreement": 0.3333,
+            "graph": 1.0,
+            "citation": 1.0,
+            "support": 0.6,
+            "n_supporting": 3,
+            "top_bm25_raw": 15.537
+          }
+        },
+        {
+          "q": "how do tides work on the ocean",
+          "score": 0.1564,
+          "level": "low",
+          "needs_research": true,
+          "signals": {
+            "semantic": 0.0,
+            "bm25": 0.5426,
+            "agreement": 0.25,
+            "graph": 1.0,
+            "citation": 1.0,
+            "support": 0.8,
+            "n_supporting": 4,
+            "top_bm25_raw": 11.936
+          }
+        }
+      ]
+    }
+  },
+  "source_quality": {
+    "n_sources": 8,
+    "duplicates_detected": 1,
+    "selected": 3,
+    "ranked": [
+      {
+        "domain": "pytorch.org",
+        "trust": 0.775,
+        "authority": 0.95,
+        "spam": 0.0,
+        "educational": 1.0,
+        "duplicate": false
+      },
+      {
+        "domain": "scikit-learn.org",
+        "trust": 0.715,
+        "authority": 0.95,
+        "spam": 0.0,
+        "educational": 0.7,
+        "duplicate": false
+      },
+      {
+        "domain": "arxiv.org",
+        "trust": 0.675,
+        "authority": 1.0,
+        "spam": 0.0,
+        "educational": 0.4,
+        "duplicate": false
+      },
+      {
+        "domain": "stackoverflow.com",
+        "trust": 0.635,
+        "authority": 0.75,
+        "spam": 0.0,
+        "educational": 0.7,
+        "duplicate": false
+      },
+      {
+        "domain": "medium.com",
+        "trust": 0.595,
+        "authority": 0.5,
+        "spam": 0.0,
+        "educational": 1.0,
+        "duplicate": false
+      },
+      {
+        "domain": "en.wikipedia.org",
+        "trust": 0.57,
+        "authority": 0.85,
+        "spam": 0.0,
+        "educational": 0.4,
+        "duplicate": false
+      },
+      {
+        "domain": "buy-cheap-degrees.biz",
+        "trust": 0.0,
+        "authority": 0.45,
+        "spam": 1.0,
+        "educational": 0.4,
+        "duplicate": false
+      },
+      {
+        "domain": "en.wikipedia.org",
+        "trust": 0.57,
+        "authority": 0.85,
+        "spam": 0.0,
+        "educational": 0.4,
+        "duplicate": true
+      }
+    ]
+  },
+  "merge": {
+    "n_kb_items": 6,
+    "n_web_items": 1,
+    "all_cited": true,
+    "web_provenance_kept": true,
+    "top_source_type": "pdf"
+  },
+  "incremental_indexing": {
+    "resource_id": "research.web.web.gradient-boosting-ensembles",
+    "n_children": 1,
+    "timings_ms": {
+      "ingest": 76.1,
+      "chunk": 5.2,
+      "embed": 1758.0,
+      "qdrant": 39.6,
+      "bm25": 3.0,
+      "graph": 57.0
+    },
+    "total_ms": 1939.0,
+    "searchable": true,
+    "graph_nodes_added": 8,
+    "ok": true
+  }
+}

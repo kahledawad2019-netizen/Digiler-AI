@@ -1,0 +1,35 @@
+[
+  {
+    "n": 500,
+    "dim": 384,
+    "top_k": 10,
+    "insert_s": 0.865,
+    "points/s": 578.2,
+    "search_ms": 1.8,
+    "search_p95_ms": 1.95,
+    "peak_mb": 4.2,
+    "storage_mb": 0.73
+  },
+  {
+    "n": 1000,
+    "dim": 384,
+    "top_k": 10,
+    "insert_s": 1.75,
+    "points/s": 571.5,
+    "search_ms": 1.5,
+    "search_p95_ms": 1.67,
+    "peak_mb": 7.5,
+    "storage_mb": 1.46
+  },
+  {
+    "n": 2000,
+    "dim": 384,
+    "top_k": 10,
+    "insert_s": 3.477,
+    "points/s": 575.2,
+    "search_ms": 2.68,
+    "search_p95_ms": 3.24,
+    "peak_mb": 14.1,
+    "storage_mb": 2.93
+  }
+]

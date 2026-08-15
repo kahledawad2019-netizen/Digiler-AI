@@ -1,0 +1,150 @@
+{
+  "goal": "master my weak concepts before the final exam",
+  "stats": {
+    "n_days_used": 7,
+    "deadline_days": 10,
+    "minutes_per_day": 60,
+    "total_minutes": 321,
+    "n_activities": 21,
+    "by_activity": {
+      "read": 6,
+      "quiz": 6,
+      "practice": 3,
+      "revision": 6
+    },
+    "n_concepts": 6,
+    "n_weak": 6,
+    "weak_minutes_share": 1.0,
+    "n_unscheduled": 0,
+    "fits_deadline": true,
+    "max_day_minutes": 59
+  },
+  "prerequisite_ordered": true,
+  "concepts": [
+    {
+      "concept": "Optimizer",
+      "mastery": 0.114,
+      "week": 1
+    },
+    {
+      "concept": "Probability Distribution",
+      "mastery": 0.114,
+      "week": 2
+    },
+    {
+      "concept": "Activation Function",
+      "mastery": 0.114,
+      "week": 2
+    },
+    {
+      "concept": "Random Variable",
+      "mastery": 0.114,
+      "week": 4
+    },
+    {
+      "concept": "Clustering",
+      "mastery": 0.114,
+      "week": 6
+    },
+    {
+      "concept": "Structure Sentence",
+      "mastery": 0.114,
+      "week": 99
+    }
+  ],
+  "unscheduled": [],
+  "n_days": 7,
+  "sample_days": [
+    {
+      "day": 1,
+      "minutes": 59,
+      "activities": [
+        {
+          "type": "read",
+          "concept": "Optimizer",
+          "concept_id": "concept:optimizer",
+          "minutes": 23,
+          "resource_id": "nontechnical.eng.general.session-12-make-or-change-an-appointment-by-email-updated-2",
+          "title": "session-12-make-or-change-an-appointment-by-email-updated-2"
+        },
+        {
+          "type": "quiz",
+          "concept": "Optimizer",
+          "concept_id": "concept:optimizer",
+          "minutes": 5,
+          "resource_id": "",
+          "title": ""
+        },
+        {
+          "type": "practice",
+          "concept": "Optimizer",
+          "concept_id": "concept:optimizer",
+          "minutes": 31,
+          "resource_id": "technical.aiml.knowledge-basemachin.week12-neural-networks-lab-1-1",
+          "title": "week12-neural-networks-lab-1-1"
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "minutes": 59,
+      "activities": [
+        {
+          "type": "read",
+          "concept": "Probability Distribution",
+          "concept_id": "concept:probability-distribution",
+          "minutes": 23,
+          "resource_id": "technical.aiml.knowledge-basemachin.lecture4-data-data-manipulation",
+          "title": "lecture4-data-data-manipulation"
+        },
+        {
+          "type": "quiz",
+          "concept": "Probability Distribution",
+          "concept_id": "concept:probability-distribution",
+          "minutes": 5,
+          "resource_id": "",
+          "title": ""
+        },
+        {
+          "type": "practice",
+          "concept": "Probability Distribution",
+          "concept_id": "concept:probability-distribution",
+          "minutes": 31,
+          "resource_id": "technical.aiml.knowledge-basemachin.week05",
+          "title": "week05"
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "minutes": 59,
+      "activities": [
+        {
+          "type": "read",
+          "concept": "Activation Function",
+          "concept_id": "concept:activation-function",
+          "minutes": 23,
+          "resource_id": "technical.aiml.knowledge-basemachin.lecture11-neural-network-systems",
+          "title": "lecture11-neural-network-systems"
+        },
+        {
+          "type": "quiz",
+          "concept": "Activation Function",
+          "concept_id": "concept:activation-function",
+          "minutes": 5,
+          "resource_id": "",
+          "title": ""
+        },
+        {
+          "type": "practice",
+          "concept": "Activation Function",
+          "concept_id": "concept:activation-function",
+          "minutes": 31,
+          "resource_id": "technical.aiml.knowledge-basemachin.week12-neural-networks-lab-1-1",
+          "title": "week12-neural-networks-lab-1-1"
+        }
+      ]
+    }
+  ],
+  "html": "D:\\Ai tools\\reports\\stage20_planner\\study_plan.html"
+}

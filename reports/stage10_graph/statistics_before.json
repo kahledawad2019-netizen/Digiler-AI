@@ -1,0 +1,86 @@
+{
+  "nodes": 1627,
+  "edges": 6325,
+  "by_node_type": {
+    "course": 7,
+    "module": 70,
+    "resource": 257,
+    "topic": 1046,
+    "concept": 247
+  },
+  "by_edge_type": {
+    "contains": 1564,
+    "explains": 209,
+    "prerequisite": 59,
+    "depends_on": 59,
+    "example_of": 22,
+    "appears_in": 250,
+    "related_to": 2329,
+    "mentioned_in": 1833
+  },
+  "density": 0.002391,
+  "avg_degree": 7.775,
+  "weakly_connected_components": 3,
+  "top_degree_nodes": [
+    {
+      "id": "concept:data",
+      "label": "data",
+      "type": "concept",
+      "degree": 241
+    },
+    {
+      "id": "concept:model",
+      "label": "model",
+      "type": "concept",
+      "degree": 146
+    },
+    {
+      "id": "concept:example",
+      "label": "example",
+      "type": "concept",
+      "degree": 145
+    },
+    {
+      "id": "concept:learning",
+      "label": "learning",
+      "type": "concept",
+      "degree": 132
+    },
+    {
+      "id": "concept:probability",
+      "label": "probability",
+      "type": "concept",
+      "degree": 120
+    },
+    {
+      "id": "concept:introduction",
+      "label": "introduction",
+      "type": "concept",
+      "degree": 101
+    },
+    {
+      "id": "concept:random",
+      "label": "random",
+      "type": "concept",
+      "degree": 92
+    },
+    {
+      "id": "concept:plt",
+      "label": "plt",
+      "type": "concept",
+      "degree": 89
+    },
+    {
+      "id": "concept:dataset",
+      "label": "dataset",
+      "type": "concept",
+      "degree": 88
+    },
+    {
+      "id": "resource:technical.aiml.knowledge-basemachin.week03",
+      "label": "week03",
+      "type": "resource",
+      "degree": 87
+    }
+  ]
+}

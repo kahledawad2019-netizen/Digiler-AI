@@ -1,0 +1,57 @@
+[
+  {
+    "query": "How do convolutional neural networks use pooling layers?",
+    "items": 6,
+    "overall_confidence": 0.8636,
+    "build_ms": 27572.6,
+    "peak_kb": 394414.3,
+    "serialized_bytes": 11877,
+    "valid": true,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "query": "What is a foreign key and referential integrity?",
+    "items": 6,
+    "overall_confidence": 0.8526,
+    "build_ms": 393.6,
+    "peak_kb": 65928.5,
+    "serialized_bytes": 10930,
+    "valid": true,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "query": "Explain overfitting and regularization in deep learning",
+    "items": 6,
+    "overall_confidence": 0.8739,
+    "build_ms": 759.9,
+    "peak_kb": 65928.4,
+    "serialized_bytes": 10880,
+    "valid": true,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "query": "What is the difference between primary key and foreign key?",
+    "items": 6,
+    "overall_confidence": 0.84,
+    "build_ms": 445.6,
+    "peak_kb": 65928.0,
+    "serialized_bytes": 10279,
+    "valid": true,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "query": "How does K-means clustering assign points to clusters?",
+    "items": 6,
+    "overall_confidence": 0.8563,
+    "build_ms": 1238.8,
+    "peak_kb": 65928.0,
+    "serialized_bytes": 12431,
+    "valid": true,
+    "errors": 0,
+    "warnings": 0
+  }
+]

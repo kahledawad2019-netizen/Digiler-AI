@@ -1,0 +1,28 @@
+# =============================================================================
+# Language policy (approved KB redesign, Step 3 §8 — "bilingual from day one")
+# -----------------------------------------------------------------------------
+# The corpus is English today, but the decision on record is to ADD Arabic
+# content, so language is a first-class field everywhere and Arabic is a
+# supported value from the start.
+# =============================================================================
+
+default: "en"
+
+supported:
+  - code: "en"
+    name: "English"
+    script: "latin"
+    bm25_analyzer: "standard"        # future hybrid-retrieval hint
+
+  - code: "ar"
+    name: "Arabic"
+    script: "arabic"
+    # Arabic needs its own analysis (diacritic stripping, alef/hamza/ta-marbuta
+    # normalization) or exact-match retrieval silently degrades. Recorded now so
+    # the future BM25 arm honours it (audit challenge, cross-lingual section).
+    bm25_analyzer: "arabic"
+
+# Logical lessons that exist in more than one language are linked by a shared
+# `parallel_group` on their metadata, enabling aligned cross-lingual eval sets.
+cross_lingual_pairs:
+  enabled: true

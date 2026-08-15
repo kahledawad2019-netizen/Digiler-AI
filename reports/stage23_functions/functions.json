@@ -1,0 +1,100 @@
+{
+  "n_functions": 10,
+  "functions": [
+    "calculator",
+    "python",
+    "search",
+    "planner",
+    "quiz",
+    "web_search",
+    "pdf",
+    "video",
+    "calendar",
+    "knowledge_update"
+  ],
+  "schemas_valid": true,
+  "valid_dispatch": {
+    "n": 8,
+    "succeeded": 8,
+    "success_rate": 1.0,
+    "results": [
+      {
+        "name": "calculator",
+        "ok": true,
+        "latency_ms": 0.11,
+        "sample": "{\"expression\": \"2 * (3 + 4) ** 2\", \"value\": 98}"
+      },
+      {
+        "name": "python",
+        "ok": true,
+        "latency_ms": 0.8,
+        "sample": "{\"stdout\": \"\", \"result\": 285}"
+      },
+      {
+        "name": "search",
+        "ok": true,
+        "latency_ms": 64.38,
+        "sample": "{\"answer\": \"Key concepts: Convolutional Neural Network [K1], Feature Engineering [K2], Ove"
+      },
+      {
+        "name": "planner",
+        "ok": true,
+        "latency_ms": 2.47,
+        "sample": "{\"plan\": {\"goal\": \"master my weak concepts\", \"days\": [{\"day\": 1, \"minutes\": 41, \"activitie"
+      },
+      {
+        "name": "quiz",
+        "ok": true,
+        "latency_ms": 147.78,
+        "sample": "{\"question\": \"Define the concept of 'concept:sql-join'.\", \"difficulty\": \"very-easy\", \"sour"
+      },
+      {
+        "name": "calendar",
+        "ok": true,
+        "latency_ms": 3.15,
+        "sample": "{\"ics\": \"BEGIN:VCALENDAR\\r\\nVERSION:2.0\\r\\nPRODID:-//Digiler AI//Study Planner//EN\\r\\nCALS"
+      },
+      {
+        "name": "web_search",
+        "ok": true,
+        "latency_ms": 0.02,
+        "sample": "{\"sources\": []}"
+      },
+      {
+        "name": "pdf",
+        "ok": true,
+        "latency_ms": 433.47,
+        "sample": "{\"n_pages\": 9, \"chars\": 1858, \"text\": \"DIGILIANS\\nO P E N I N G  T H E  W O R L D  S I N C"
+      }
+    ]
+  },
+  "safety": {
+    "n_attacks": 10,
+    "blocked": 10,
+    "blocked_rate": 1.0,
+    "leaked": []
+  },
+  "validation": {
+    "n": 4,
+    "rejected": 4,
+    "rejection_rate": 1.0
+  },
+  "latency_ms": {
+    "calculator": 0.11,
+    "python": 0.8,
+    "search": 64.38,
+    "planner": 2.47,
+    "quiz": 147.78,
+    "calendar": 3.15,
+    "web_search": 0.02,
+    "pdf": 433.47
+  },
+  "example_calc": {
+    "expression": "2 * (3 + 4) ** 2",
+    "value": 98
+  },
+  "example_python": {
+    "stdout": "",
+    "result": 285
+  }
+}

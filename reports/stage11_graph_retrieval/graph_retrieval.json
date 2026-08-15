@@ -1,0 +1,554 @@
+{
+  "corpus": {
+    "nodes": 1511,
+    "edges": 5091,
+    "concepts": 131,
+    "n_queries": 100
+  },
+  "known_item": [
+    {
+      "retriever": "hybrid",
+      "n": 100,
+      "Hit@1": 0.9,
+      "Hit@5": 0.97,
+      "Hit@10": 0.98,
+      "Recall@10": 0.017,
+      "P@5": 0.718,
+      "MRR": 0.926,
+      "MAP": 0.015,
+      "nDCG@10": 0.713,
+      "latency_ms": 121.79,
+      "qps": 8.2
+    },
+    {
+      "retriever": "graph",
+      "n": 100,
+      "Hit@1": 0.9,
+      "Hit@5": 0.97,
+      "Hit@10": 0.98,
+      "Recall@10": 0.018,
+      "P@5": 0.728,
+      "MRR": 0.926,
+      "MAP": 0.015,
+      "nDCG@10": 0.726,
+      "latency_ms": 119.25,
+      "qps": 8.4
+    }
+  ],
+  "related_passage": [
+    {
+      "retriever": "hybrid",
+      "n": 100,
+      "Hit@1": 0.71,
+      "Hit@5": 0.88,
+      "Hit@10": 0.92,
+      "Recall@10": 0.013,
+      "P@5": 0.654,
+      "MRR": 0.778,
+      "MAP": 0.01,
+      "nDCG@10": 0.653,
+      "latency_ms": 113.2,
+      "qps": 8.8
+    },
+    {
+      "retriever": "graph",
+      "n": 100,
+      "Hit@1": 0.71,
+      "Hit@5": 0.89,
+      "Hit@10": 0.92,
+      "Recall@10": 0.013,
+      "P@5": 0.668,
+      "MRR": 0.782,
+      "MAP": 0.01,
+      "nDCG@10": 0.669,
+      "latency_ms": 115.88,
+      "qps": 8.6
+    }
+  ],
+  "graph_metrics": {
+    "concept_link_coverage": 1.0,
+    "graph_recall": 1.0,
+    "avg_seed_concepts": 7.87,
+    "avg_expanded_concepts": 60.0,
+    "node_coverage": 0.208,
+    "edge_coverage": 0.313,
+    "concept_coverage": 0.969,
+    "hop_distribution": {
+      "0": 100
+    },
+    "graph_evidence_gold_rate": 0.3,
+    "mean_latency_ms": 116.21,
+    "throughput_qps": 8.6
+  },
+  "depth_ablation": [
+    {
+      "hops": 1,
+      "retriever": "graph@1hop",
+      "n": 100,
+      "Hit@1": 0.71,
+      "Hit@5": 0.89,
+      "Hit@10": 0.92,
+      "Recall@10": 0.013,
+      "P@5": 0.668,
+      "MRR": 0.782,
+      "MAP": 0.01,
+      "nDCG@10": 0.669,
+      "latency_ms": 115.89,
+      "qps": 8.6
+    },
+    {
+      "hops": 2,
+      "retriever": "graph@2hop",
+      "n": 100,
+      "Hit@1": 0.71,
+      "Hit@5": 0.89,
+      "Hit@10": 0.92,
+      "Recall@10": 0.013,
+      "P@5": 0.668,
+      "MRR": 0.782,
+      "MAP": 0.01,
+      "nDCG@10": 0.669,
+      "latency_ms": 125.39,
+      "qps": 8.0
+    },
+    {
+      "hops": 3,
+      "retriever": "graph@3hop",
+      "n": 100,
+      "Hit@1": 0.71,
+      "Hit@5": 0.89,
+      "Hit@10": 0.92,
+      "Recall@10": 0.013,
+      "P@5": 0.668,
+      "MRR": 0.782,
+      "MAP": 0.01,
+      "nDCG@10": 0.669,
+      "latency_ms": 125.41,
+      "qps": 8.0
+    }
+  ],
+  "example": {
+    "query": "convolutional neural network",
+    "seed_concepts": [
+      {
+        "id": "concept:cnn",
+        "score": 1.0
+      },
+      {
+        "id": "concept:neural-network",
+        "score": 0.6
+      },
+      {
+        "id": "concept:image-classification",
+        "score": 0.6
+      },
+      {
+        "id": "concept:normalization-db",
+        "score": 0.6
+      },
+      {
+        "id": "concept:machine-learning",
+        "score": 0.6
+      },
+      {
+        "id": "concept:deep-learning",
+        "score": 0.6
+      },
+      {
+        "id": "concept:activation-function",
+        "score": 0.6
+      },
+      {
+        "id": "concept:optimizer",
+        "score": 0.6
+      }
+    ],
+    "expanded": [
+      {
+        "concept": "Convolutional Neural Network",
+        "hop": 0,
+        "relationship": "seed",
+        "score": 1.0,
+        "path": [
+          "concept:cnn"
+        ]
+      },
+      {
+        "concept": "Neural Network",
+        "hop": 0,
+        "relationship": "seed",
+        "score": 0.6,
+        "path": [
+          "concept:neural-network"
+        ]
+      },
+      {
+        "concept": "Image Classification",
+        "hop": 0,
+        "relationship": "seed",
+        "score": 0.6,
+        "path": [
+          "concept:image-classification"
+        ]
+      },
+      {
+        "concept": "Database Normalization",
+        "hop": 0,
+        "relationship": "seed",
+        "score": 0.6,
+        "path": [
+          "concept:normalization-db"
+        ]
+      },
+      {
+        "concept": "Machine Learning",
+        "hop": 0,
+        "relationship": "seed",
+        "score": 0.6,
+        "path": [
+          "concept:machine-learning"
+        ]
+      },
+      {
+        "concept": "Deep Learning",
+        "hop": 0,
+        "relationship": "seed",
+        "score": 0.6,
+        "path": [
+          "concept:deep-learning"
+        ]
+      },
+      {
+        "concept": "Activation Function",
+        "hop": 0,
+        "relationship": "seed",
+        "score": 0.6,
+        "path": [
+          "concept:activation-function"
+        ]
+      },
+      {
+        "concept": "Optimizer",
+        "hop": 0,
+        "relationship": "seed",
+        "score": 0.6,
+        "path": [
+          "concept:optimizer"
+        ]
+      },
+      {
+        "concept": "Data Preprocessing",
+        "hop": 1,
+        "relationship": "related_to",
+        "score": 0.3,
+        "path": [
+          "concept:cnn",
+          "concept:data-preprocessing"
+        ]
+      },
+      {
+        "concept": "Feature Engineering",
+        "hop": 1,
+        "relationship": "related_to",
+        "score": 0.3,
+        "path": [
+          "concept:cnn",
+          "concept:feature-engineering"
+        ]
+      },
+      {
+        "concept": "Overfitting",
+        "hop": 1,
+        "relationship": "related_to",
+        "score": 0.3,
+        "path": [
+          "concept:cnn",
+          "concept:overfitting"
+        ]
+      },
+      {
+        "concept": "Regularization",
+        "hop": 1,
+        "relationship": "related_to",
+        "score": 0.3,
+        "path": [
+          "concept:cnn",
+          "concept:regularization"
+        ]
+      }
+    ],
+    "graph_evidence": [
+      {
+        "concept_id": "concept:cnn",
+        "concept": "Convolutional Neural Network",
+        "score": 1.0,
+        "hop": 0,
+        "relationship": "seed",
+        "path": [
+          "Convolutional Neural Network"
+        ],
+        "source_resources": [
+          "technical.applied-dl.course-project.course-project-description",
+          "technical.applied-dl.w04.practical-dl-lab4",
+          "technical.applied-dl.w04.practical-dl-lec4-final",
+          "technical.applied-dl.w05.multiclass-classification-with-convolutional-neural-networks",
+          "technical.applied-dl.w05.practical-dl-lab5",
+          "technical.applied-dl.w05.practical-dl-lec5-2",
+          "technical.applied-dl.w05.practical-dl-lec5-examples",
+          "technical.applied-dl.w05.solution-of-lec-5-example",
+          "technical.applied-dl.w06.practical-dl-lec6-1",
+          "technical.applied-dl.w06.transfer-learning-mobilenetv2"
+        ],
+        "confidence": 1.0
+      },
+      {
+        "concept_id": "concept:neural-network",
+        "concept": "Neural Network",
+        "score": 0.6,
+        "hop": 0,
+        "relationship": "seed",
+        "path": [
+          "Neural Network"
+        ],
+        "source_resources": [
+          "technical.agentic-ai.w01.introduction-to-agentic-ai-week1",
+          "technical.aiml.knowledge-basemachin.lecture1",
+          "technical.aiml.knowledge-basemachin.lecture11-neural-network-systems",
+          "technical.aiml.knowledge-basemachin.lecture2",
+          "technical.aiml.knowledge-basemachin.lecture3-introduction-to-ml",
+          "technical.aiml.knowledge-basemachin.lecture4-data-data-manipulation",
+          "technical.aiml.knowledge-basemachin.lecture9-svm",
+          "technical.aiml.knowledge-basemachin.week12-neural-networks-lab-1-1",
+          "technical.applied-dl.w01.practical-dl-lab1-1",
+          "technical.applied-dl.w01.practical-dl-lec1-1"
+        ],
+        "confidence": 1.0
+      },
+      {
+        "concept_id": "concept:image-classification",
+        "concept": "Image Classification",
+        "score": 0.6,
+        "hop": 0,
+        "relationship": "seed",
+        "path": [
+          "Image Classification"
+        ],
+        "source_resources": [
+          "technical.agentic-ai.w04.aigenerative-ai-week4",
+          "technical.aiml.knowledge-basemachin.week-7-naive-bayes-1",
+          "technical.applied-dl.w02.multiclass-classification-with-fully-connected-networks",
+          "technical.applied-dl.w02.practical-dl-lab2-1",
+          "technical.applied-dl.w02.practical-dl-lec2-1",
+          "technical.applied-dl.w03.practical-dl-lec3-1",
+          "technical.applied-dl.w04.3-hyperparameter-tuning-with-zalando-dataset",
+          "technical.applied-dl.w05.multiclass-classification-with-convolutional-neural-networks",
+          "technical.applied-dl.w05.practical-dl-lab5",
+          "technical.applied-dl.w05.practical-dl-lec5-2"
+        ],
+        "confidence": 1.0
+      },
+      {
+        "concept_id": "concept:normalization-db",
+        "concept": "Database Normalization",
+        "score": 0.6,
+        "hop": 0,
+        "relationship": "seed",
+        "path": [
+          "Database Normalization"
+        ],
+        "source_resources": [
+          "technical.aiml.knowledge-basemachin.lecture4-data-data-manipulation",
+          "technical.aiml.knowledge-basemachin.week05",
+          "technical.applied-dl.w02.multiclass-classification-with-fully-connected-networks",
+          "technical.applied-dl.w03.regularization-techniques",
+          "technical.applied-dl.w04.3-hyperparameter-tuning-with-zalando-dataset",
+          "technical.applied-dl.w05.multiclass-classification-with-convolutional-neural-networks",
+          "technical.applied-dl.w05.practical-dl-lec5-2",
+          "technical.applied-dl.w08.practical-dl-lab8-metric-analysis-with-mnist-dataset",
+          "technical.applied-dl.w11.gan-with-mnist",
+          "technical.dmv.general.db-reference-book"
+        ],
+        "confidence": 1.0
+      },
+      {
+        "concept_id": "concept:machine-learning",
+        "concept": "Machine Learning",
+        "score": 0.6,
+        "hop": 0,
+        "relationship": "seed",
+        "path": [
+          "Machine Learning"
+        ],
+        "source_resources": [
+          "technical.agentic-ai.w01.introduction-to-agentic-ai-week1",
+          "technical.agentic-ai.w02.prompt-engineering-week2",
+          "technical.agentic-ai.w03.prompt-engineering-week3",
+          "technical.agentic-ai.w04.aigenerative-ai-week4",
+          "technical.aiml.knowledge-basemachin.decisiontree",
+          "technical.aiml.knowledge-basemachin.lecture-5-python-revision",
+          "technical.aiml.knowledge-basemachin.lecture1",
+          "technical.aiml.knowledge-basemachin.lecture10-kmeans",
+          "technical.aiml.knowledge-basemachin.lecture11-neural-network-systems",
+          "technical.aiml.knowledge-basemachin.lecture2"
+        ],
+        "confidence": 1.0
+      },
+      {
+        "concept_id": "concept:deep-learning",
+        "concept": "Deep Learning",
+        "score": 0.6,
+        "hop": 0,
+        "relationship": "seed",
+        "path": [
+          "Deep Learning"
+        ],
+        "source_resources": [
+          "technical.agentic-ai.w01.introduction-to-agentic-ai-week1",
+          "technical.agentic-ai.w04.aigenerative-ai-week4",
+          "technical.aiml.knowledge-basemachin.lecture3-introduction-to-ml",
+          "technical.aiml.knowledge-basemachin.lecture4-data-data-manipulation",
+          "technical.aiml.knowledge-basemachin.lecture6-knn",
+          "technical.aiml.knowledge-basemachin.lecture7-linear-regression",
+          "technical.aiml.knowledge-basemachin.lecture8-decision-tree",
+          "technical.aiml.knowledge-basemachin.lecture9-svm",
+          "technical.applied-dl.course-project.course-project-description",
+          "technical.applied-dl.w01.practical-dl-lab1-1"
+        ],
+        "confidence": 1.0
+      },
+      {
+        "concept_id": "concept:activation-function",
+        "concept": "Activation Function",
+        "score": 0.6,
+        "hop": 0,
+        "relationship": "seed",
+        "path": [
+          "Activation Function"
+        ],
+        "source_resources": [
+          "technical.aiml.knowledge-basemachin.lecture11-neural-network-systems",
+          "technical.aiml.knowledge-basemachin.week12-neural-networks-lab-1-1",
+          "technical.applied-dl.w02.linear-regression-with-one-neuron",
+          "technical.applied-dl.w02.logistic-regression-with-one-neuron",
+          "technical.applied-dl.w02.multiclass-classification-with-fully-connected-networks",
+          "technical.applied-dl.w02.practical-dl-lab2-1",
+          "technical.applied-dl.w02.practical-dl-lec2-1",
+          "technical.applied-dl.w03.practical-dl-lab3",
+          "technical.applied-dl.w03.practical-dl-lec3-examples",
+          "technical.applied-dl.w03.regularization-techniques"
+        ],
+        "confidence": 1.0
+      },
+      {
+        "concept_id": "concept:optimizer",
+        "concept": "Optimizer",
+        "score": 0.6,
+        "hop": 0,
+        "relationship": "seed",
+        "path": [
+          "Optimizer"
+        ],
+        "source_resources": [
+          "nontechnical.eng.general.session-12-make-or-change-an-appointment-by-email-updated-2",
+          "technical.aiml.knowledge-basemachin.week12-neural-networks-lab-1-1",
+          "technical.applied-dl.course-project.course-project-description",
+          "technical.applied-dl.w01.practical-dl-lab1",
+          "technical.applied-dl.w01.practical-dl-lab1-1",
+          "technical.applied-dl.w01.practical-dl-lec1-1",
+          "technical.applied-dl.w02.linear-regression-with-one-neuron",
+          "technical.applied-dl.w02.logistic-regression-with-one-neuron",
+          "technical.applied-dl.w02.multiclass-classification-with-fully-connected-networks",
+          "technical.applied-dl.w02.practical-dl-lab2-1"
+        ],
+        "confidence": 1.0
+      }
+    ],
+    "top_chunks": [
+      {
+        "rank": 0,
+        "resource_id": "technical.applied-dl.w05.multiclass-classification-with-convolutional-neural-networks",
+        "score": 0.5228,
+        "components": {
+          "dense": 0.9018016237868434,
+          "dense_rank": 2,
+          "bm25": 22.18679601096619,
+          "bm25_rank": 1,
+          "rrf": 0.022845055526176626,
+          "graph": 1.0
+        }
+      },
+      {
+        "rank": 1,
+        "resource_id": "technical.applied-dl.w06.practical-dl-lec6-1",
+        "score": 0.5227,
+        "components": {
+          "dense": 0.9059809176734792,
+          "dense_rank": 1,
+          "bm25": 20.80747974963368,
+          "bm25_rank": 2,
+          "rrf": 0.022686409307244845,
+          "graph": 1.0
+        }
+      },
+      {
+        "rank": 2,
+        "resource_id": "technical.applied-dl.w05.practical-dl-lab5",
+        "score": 0.5209,
+        "components": {
+          "dense": 0.8923283554804728,
+          "dense_rank": 9,
+          "bm25": 17.069722199341484,
+          "bm25_rank": 6,
+          "rrf": 0.020948616600790514,
+          "graph": 1.0
+        }
+      },
+      {
+        "rank": 3,
+        "resource_id": "technical.applied-dl.w06.practical-dl-lec6-1",
+        "score": 0.5207,
+        "components": {
+          "dense": 0.8986707522668009,
+          "dense_rank": 4,
+          "bm25": 16.788984800884506,
+          "bm25_rank": 9,
+          "rrf": 0.020742753623188406,
+          "graph": 1.0
+        }
+      },
+      {
+        "rank": 4,
+        "resource_id": "technical.applied-dl.w05.practical-dl-lab5",
+        "score": 0.5195,
+        "components": {
+          "dense": 0.8822519992894534,
+          "dense_rank": 16,
+          "bm25": 16.605774761082838,
+          "bm25_rank": 10,
+          "rrf": 0.019548872180451128,
+          "graph": 1.0
+        }
+      },
+      {
+        "rank": 5,
+        "resource_id": "technical.applied-dl.w05.multiclass-classification-with-convolutional-neural-networks",
+        "score": 0.5166,
+        "components": {
+          "dense": 0.8726850481036096,
+          "dense_rank": 38,
+          "bm25": 15.540216589983789,
+          "bm25_rank": 20,
+          "rrf": 0.016581632653061226,
+          "graph": 1.0
+        }
+      }
+    ],
+    "stats": {
+      "seed_concepts": 8,
+      "expanded_concepts": 60,
+      "graph_resources": 148,
+      "max_hop": 1,
+      "latency_ms": 124.7
+    }
+  }
+}

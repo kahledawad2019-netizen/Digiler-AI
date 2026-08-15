@@ -1,0 +1,72 @@
+# =============================================================================
+# Track -> Course -> Module ontology (approved KB redesign, Step 3 §1)
+# -----------------------------------------------------------------------------
+# Evidence: the supplementary archive is labelled "By Non-technical Track
+# Academic Organizers", so Digilians already organises by track. This file is
+# the authoritative classification vocabulary the Registry validates against.
+# `id` values are slugs used inside resource_ids: <track>.<course>.<module>...
+# =============================================================================
+
+tracks:
+  - id: technical
+    title: "Technical Track"
+    courses:
+      - id: dmv
+        title: "Data Mining and Visualization"
+        # The three honest phases of this course (audit finding KB-14).
+        modules:
+          - { id: "w01", title: "Week 1 — Intro to SQL Server & SSMS" }
+          - { id: "w02", title: "Week 2 — SQL DDL" }
+          - { id: "w03", title: "Week 3 — Constraints & Relationships" }
+          - { id: "w04", title: "Week 4 — DML Basics" }
+          - { id: "w05", title: "Week 5 — Revision" }
+          - { id: "w06", title: "Week 6 — EDA Foundations" }
+          - { id: "w07", title: "Week 7 — Exploratory Data Analysis" }
+          - { id: "w08", title: "Week 8 — Preprocessing" }
+          - { id: "w09", title: "Week 9 — Pattern Mining (Basic)" }
+          - { id: "w10", title: "Week 10 — Pattern Mining (Advanced)" }
+          - { id: "w11", title: "Week 11 — Clustering Analysis" }
+          - { id: "ref", title: "Reference Texts" }
+
+      - id: aiml
+        title: "Introduction to AI and Machine Learning"
+        modules:
+          - { id: "l01", title: "Lecture 1 — Foundations" }
+          - { id: "l02", title: "Lecture 2" }
+          - { id: "l03", title: "Lecture 3 — Introduction to ML" }
+          - { id: "l04", title: "Lecture 4 — Data & Data Manipulation" }
+          - { id: "l05", title: "Lecture 5 — Python Revision" }
+          - { id: "l06", title: "Lecture 6 — KNN" }
+          - { id: "l07", title: "Lecture 7 — Linear Regression" }
+          - { id: "l08", title: "Lecture 8 — Decision Tree" }
+          - { id: "l09", title: "Lecture 9 — SVM" }
+          - { id: "l10", title: "Lecture 10 — K-Means" }
+          - { id: "l11", title: "Lecture 11 — Neural Networks" }
+
+      # --- courses added for the Basic_knowladg production corpus (2026-07) ---
+      # Modules are not validated (only track + course are), so week folders map
+      # to module slugs at ingestion time without needing enumeration here.
+      - id: agentic-ai
+        title: "Agentic AI (Data Analysis / Software Dev)"
+        modules: [{ id: "wNN", title: "Week NN" }]
+
+      - id: applied-dl
+        title: "Applied Deep Learning"
+        modules: [{ id: "wNN", title: "Week NN" }]
+
+      - id: applied-stats
+        title: "Applied Statistics"
+        modules: [{ id: "wNN", title: "Week NN" }]
+
+      - id: excel-ai
+        title: "Excel with AI Tools"
+        modules: [{ id: "wNN", title: "Week NN / session" }]
+
+  - id: nontechnical
+    title: "Non-technical Track"
+    courses:
+      - id: eng
+        title: "Business English (Berlitz Digilians)"
+        modules:
+          # Sessions 1..31; module id pattern s01..s31.
+          - { id: "sNN", title: "Session NN (template — one module per session)" }

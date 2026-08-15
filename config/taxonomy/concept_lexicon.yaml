@@ -1,0 +1,110 @@
+# =============================================================================
+# Domain concept lexicon (Stage 10.5 — concept-extraction quality upgrade).
+# Curated canonical concepts for the corpus's real domains, each with aliases +
+# acronym expansions. This is the high-precision backbone of concept extraction
+# (V3 §4.3: seed + human curation firewall). The ConceptExtractor matches these
+# against the corpus text and enriches them with embedding-mined multi-word
+# phrases; generic terms (data, example, result, chapter, …) never appear.
+#
+#   id       : slug used in concept ids (concept:<id>)
+#   canonical: display name
+#   aliases  : surface forms found in text (incl. acronyms, plurals, variants)
+#   domain   : grouping for reports/coloring
+# =============================================================================
+
+concepts:
+  # --- Databases / SQL (Data Mining & Visualization) ---
+  - { id: sql-join, canonical: "SQL Join", aliases: ["join", "inner join", "outer join", "left join", "sql join"], domain: databases }
+  - { id: primary-key, canonical: "Primary Key", aliases: ["primary key", "primary keys", "pk"], domain: databases }
+  - { id: foreign-key, canonical: "Foreign Key", aliases: ["foreign key", "foreign keys", "fk"], domain: databases }
+  - { id: referential-integrity, canonical: "Referential Integrity", aliases: ["referential integrity"], domain: databases }
+  - { id: normalization-db, canonical: "Database Normalization", aliases: ["normalization", "normal form", "third normal form", "3nf"], domain: databases }
+  - { id: relational-model, canonical: "Relational Model", aliases: ["relational model", "relational database", "relation schema"], domain: databases }
+  - { id: sql-query, canonical: "SQL Query", aliases: ["sql query", "select statement", "sql server", "ssms"], domain: databases }
+  - { id: constraint, canonical: "Database Constraint", aliases: ["constraint", "constraints", "check constraint", "unique constraint"], domain: databases }
+  - { id: entity-relationship, canonical: "Entity-Relationship Model", aliases: ["entity relationship", "er diagram", "er model"], domain: databases }
+
+  # --- Data Mining ---
+  - { id: association-rule, canonical: "Association Rule Mining", aliases: ["association rule", "association rules", "apriori", "frequent pattern"], domain: data-mining }
+  - { id: pattern-mining, canonical: "Pattern Mining", aliases: ["pattern mining", "sequential pattern", "subgraph pattern"], domain: data-mining }
+  - { id: clustering, canonical: "Clustering", aliases: ["clustering", "cluster analysis"], domain: data-mining }
+  - { id: eda, canonical: "Exploratory Data Analysis", aliases: ["exploratory data analysis", "eda"], domain: data-mining }
+  - { id: data-preprocessing, canonical: "Data Preprocessing", aliases: ["data preprocessing", "preprocessing", "data cleaning"], domain: data-mining }
+
+  # --- Statistics / Probability ---
+  - { id: probability-distribution, canonical: "Probability Distribution", aliases: ["probability distribution", "distribution", "normal distribution", "binomial distribution", "poisson distribution"], domain: statistics }
+  - { id: random-variable, canonical: "Random Variable", aliases: ["random variable", "random variables"], domain: statistics }
+  - { id: hypothesis-testing, canonical: "Hypothesis Testing", aliases: ["hypothesis testing", "hypothesis test", "test of hypotheses", "null hypothesis"], domain: statistics }
+  - { id: confidence-interval, canonical: "Confidence Interval", aliases: ["confidence interval"], domain: statistics }
+  - { id: statistical-inference, canonical: "Statistical Inference", aliases: ["statistical inference", "inferential statistics"], domain: statistics }
+  - { id: mathematical-expectation, canonical: "Mathematical Expectation", aliases: ["mathematical expectation", "expected value", "expectation"], domain: statistics }
+  - { id: conditional-probability, canonical: "Conditional Probability", aliases: ["conditional probability", "bayes theorem", "bayes rule"], domain: statistics }
+  - { id: regression-analysis, canonical: "Regression Analysis", aliases: ["regression analysis", "regression", "linear regression", "logistic regression"], domain: statistics }
+  - { id: random-sampling, canonical: "Random Sampling", aliases: ["random sampling", "sampling distribution"], domain: statistics }
+
+  # --- Machine Learning ---
+  - { id: machine-learning, canonical: "Machine Learning", aliases: ["machine learning", "ml"], domain: machine-learning }
+  - { id: supervised-learning, canonical: "Supervised Learning", aliases: ["supervised learning"], domain: machine-learning }
+  - { id: unsupervised-learning, canonical: "Unsupervised Learning", aliases: ["unsupervised learning"], domain: machine-learning }
+  - { id: decision-tree, canonical: "Decision Tree", aliases: ["decision tree", "decision trees"], domain: machine-learning }
+  - { id: random-forest, canonical: "Random Forest", aliases: ["random forest", "random forests"], domain: machine-learning }
+  - { id: support-vector-machine, canonical: "Support Vector Machine", aliases: ["support vector machine", "svm"], domain: machine-learning }
+  - { id: knn, canonical: "K-Nearest Neighbors", aliases: ["k-nearest neighbors", "k nearest neighbors", "knn", "nearest neighbor"], domain: machine-learning }
+  - { id: kmeans, canonical: "K-Means Clustering", aliases: ["k-means", "k means", "kmeans", "k-means clustering"], domain: machine-learning }
+  - { id: naive-bayes, canonical: "Naive Bayes", aliases: ["naive bayes"], domain: machine-learning }
+  - { id: ensemble-learning, canonical: "Ensemble Learning", aliases: ["ensemble", "ensembles", "ensemble learning", "boosting", "bagging"], domain: machine-learning }
+  - { id: pca, canonical: "Principal Component Analysis", aliases: ["principal component analysis", "pca"], domain: machine-learning }
+  - { id: feature-engineering, canonical: "Feature Engineering", aliases: ["feature engineering", "feature selection", "feature extraction"], domain: machine-learning }
+  - { id: cross-validation, canonical: "Cross Validation", aliases: ["cross validation", "cross-validation", "k-fold"], domain: machine-learning }
+  - { id: confusion-matrix, canonical: "Confusion Matrix", aliases: ["confusion matrix", "precision recall", "f1 score"], domain: machine-learning }
+  - { id: overfitting, canonical: "Overfitting", aliases: ["overfitting", "underfitting"], domain: machine-learning }
+  - { id: regularization, canonical: "Regularization", aliases: ["regularization", "l1 regularization", "l2 regularization", "dropout"], domain: machine-learning }
+
+  # --- Deep Learning ---
+  - { id: deep-learning, canonical: "Deep Learning", aliases: ["deep learning"], domain: deep-learning }
+  - { id: neural-network, canonical: "Neural Network", aliases: ["neural network", "neural networks", "feed-forward network", "fully connected network", "artificial neural network", "ann"], domain: deep-learning }
+  - { id: cnn, canonical: "Convolutional Neural Network", aliases: ["convolutional neural network", "convolutional neural networks", "cnn", "convnet", "convolutional network"], domain: deep-learning }
+  - { id: rnn, canonical: "Recurrent Neural Network", aliases: ["recurrent neural network", "recurrent neural networks", "rnn", "lstm", "gru"], domain: deep-learning }
+  - { id: transformer, canonical: "Transformer", aliases: ["transformer", "transformers"], domain: deep-learning }
+  - { id: attention-mechanism, canonical: "Attention Mechanism", aliases: ["attention mechanism", "attention", "self-attention"], domain: deep-learning }
+  - { id: gradient-descent, canonical: "Gradient Descent", aliases: ["gradient descent", "stochastic gradient descent", "sgd"], domain: deep-learning }
+  - { id: backpropagation, canonical: "Backpropagation", aliases: ["backpropagation", "back propagation"], domain: deep-learning }
+  - { id: loss-function, canonical: "Loss Function", aliases: ["loss function", "cost function", "cross entropy", "cross-entropy"], domain: deep-learning }
+  - { id: activation-function, canonical: "Activation Function", aliases: ["activation function", "relu", "sigmoid", "softmax"], domain: deep-learning }
+  - { id: optimizer, canonical: "Optimizer", aliases: ["optimizer", "adam optimizer", "adam", "rmsprop", "momentum"], domain: deep-learning }
+  - { id: autoencoder, canonical: "Autoencoder", aliases: ["autoencoder", "autoencoders", "variational autoencoder", "vae"], domain: deep-learning }
+  - { id: gan, canonical: "Generative Adversarial Network", aliases: ["generative adversarial network", "gan", "gans"], domain: deep-learning }
+  - { id: transfer-learning, canonical: "Transfer Learning", aliases: ["transfer learning", "mobilenet", "fine-tuning pretrained"], domain: deep-learning }
+  - { id: hyperparameter-tuning, canonical: "Hyperparameter Tuning", aliases: ["hyperparameter tuning", "hyperparameter", "hyper-parameter"], domain: deep-learning }
+
+  # --- LLM / Agentic AI / RAG ---
+  - { id: large-language-model, canonical: "Large Language Model", aliases: ["large language model", "llm", "language model"], domain: agentic-ai }
+  - { id: rag, canonical: "Retrieval-Augmented Generation", aliases: ["retrieval augmented generation", "retrieval-augmented generation", "rag"], domain: agentic-ai }
+  - { id: graphrag, canonical: "GraphRAG", aliases: ["graphrag", "graph rag"], domain: agentic-ai }
+  - { id: knowledge-graph, canonical: "Knowledge Graph", aliases: ["knowledge graph", "concept graph"], domain: agentic-ai }
+  - { id: vector-database, canonical: "Vector Database", aliases: ["vector database", "vector store", "qdrant", "chroma"], domain: agentic-ai }
+  - { id: embedding-model, canonical: "Embedding Model", aliases: ["embedding model", "embeddings", "word embedding", "text embedding"], domain: agentic-ai }
+  - { id: sentence-transformer, canonical: "Sentence Transformer", aliases: ["sentence transformer", "sentence-transformers"], domain: agentic-ai }
+  - { id: cross-encoder, canonical: "Cross Encoder", aliases: ["cross encoder", "cross-encoder", "reranker"], domain: agentic-ai }
+  - { id: cosine-similarity, canonical: "Cosine Similarity", aliases: ["cosine similarity"], domain: agentic-ai }
+  - { id: prompt-engineering, canonical: "Prompt Engineering", aliases: ["prompt engineering", "prompting", "few-shot"], domain: agentic-ai }
+  - { id: fine-tuning, canonical: "Fine-Tuning", aliases: ["fine tuning", "fine-tuning"], domain: agentic-ai }
+  - { id: ai-agent, canonical: "AI Agent", aliases: ["ai agent", "agentic ai", "agent", "crew ai", "crewai"], domain: agentic-ai }
+  - { id: langchain, canonical: "LangChain", aliases: ["langchain"], domain: agentic-ai }
+  - { id: workflow-automation, canonical: "Workflow Automation", aliases: ["workflow automation", "n8n", "automation"], domain: agentic-ai }
+
+  # --- Reinforcement Learning ---
+  - { id: reinforcement-learning, canonical: "Reinforcement Learning", aliases: ["reinforcement learning", "rl"], domain: reinforcement-learning }
+  - { id: mdp, canonical: "Markov Decision Process", aliases: ["markov decision process", "mdp"], domain: reinforcement-learning }
+  - { id: q-learning, canonical: "Q-Learning", aliases: ["q-learning", "q learning"], domain: reinforcement-learning }
+  - { id: policy-gradient, canonical: "Policy Gradient", aliases: ["policy gradient"], domain: reinforcement-learning }
+
+  # --- Computer Vision ---
+  - { id: object-detection, canonical: "Object Detection", aliases: ["object detection", "yolo"], domain: computer-vision }
+  - { id: image-segmentation, canonical: "Image Segmentation", aliases: ["image segmentation", "semantic segmentation"], domain: computer-vision }
+  - { id: image-classification, canonical: "Image Classification", aliases: ["image classification", "multiclass classification"], domain: computer-vision }
+
+  # --- Data Analysis / Excel ---
+  - { id: pivot-table, canonical: "Pivot Table", aliases: ["pivot table", "pivot tables"], domain: data-analysis }
+  - { id: data-visualization, canonical: "Data Visualization", aliases: ["data visualization", "visualization", "dashboard"], domain: data-analysis }
+  - { id: spreadsheet-formula, canonical: "Spreadsheet Formula", aliases: ["vlookup", "formula", "excel formula"], domain: data-analysis }

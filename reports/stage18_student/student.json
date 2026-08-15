@@ -1,0 +1,345 @@
+{
+  "summary": {
+    "student_id": "demo-learner",
+    "overall_mastery": 0.4339,
+    "n_tracked": 6,
+    "n_weak": 3,
+    "n_strong": 3,
+    "n_events": 27,
+    "events_by_type": {
+      "quiz": 18,
+      "reading": 3,
+      "lesson": 3,
+      "video": 3
+    }
+  },
+  "separation": {
+    "weak_correctly_low": 1.0,
+    "strong_correctly_high": 1.0
+  },
+  "learning_curve": {
+    "outcomes": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      1,
+      1
+    ],
+    "mastery": [
+      0.3,
+      0.217,
+      0.158,
+      0.114,
+      0.358,
+      0.259,
+      0.463,
+      0.611,
+      0.718,
+      0.795
+    ]
+  },
+  "personalization": {
+    "n_weak_resources": 88,
+    "queries": 6,
+    "base_weak_coverage@10": 0.65,
+    "personalized_weak_coverage@10": 1.0,
+    "lift": 0.35
+  },
+  "analytics": {
+    "summary": {
+      "student_id": "demo-learner",
+      "overall_mastery": 0.4339,
+      "n_tracked": 6,
+      "n_weak": 3,
+      "n_strong": 3,
+      "n_events": 27,
+      "events_by_type": {
+        "quiz": 18,
+        "reading": 3,
+        "lesson": 3,
+        "video": 3
+      }
+    },
+    "mastery_histogram": {
+      "bins": [
+        "0-.2",
+        ".2-.4",
+        ".4-.6",
+        ".6-.8",
+        ".8-1"
+      ],
+      "counts": [
+        3,
+        0,
+        0,
+        3,
+        0
+      ]
+    },
+    "weak_concepts": [
+      {
+        "concept": "Probability Distribution",
+        "mastery": 0.125,
+        "attempts": 4
+      },
+      {
+        "concept": "Optimizer",
+        "mastery": 0.125,
+        "attempts": 4
+      },
+      {
+        "concept": "Random Variable",
+        "mastery": 0.125,
+        "attempts": 4
+      }
+    ],
+    "strong_concepts": [
+      {
+        "concept": "Structure Sentence",
+        "mastery": 0.743,
+        "attempts": 5
+      },
+      {
+        "concept": "Clustering",
+        "mastery": 0.743,
+        "attempts": 5
+      },
+      {
+        "concept": "Activation Function",
+        "mastery": 0.743,
+        "attempts": 5
+      }
+    ],
+    "progress": {
+      "quiz": 18,
+      "reading": 3,
+      "lesson": 3,
+      "video": 3
+    },
+    "confidence_history": [
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "score": 0.0
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "score": 0.0
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "score": 0.0
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "score": 0.0
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "score": 0.0
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "score": 0.0
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "score": 0.0
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "score": 0.0
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "score": 0.0
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "score": 1.0
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "score": 1.0
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "score": 1.0
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "score": 1.0
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "score": 1.0
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "score": 1.0
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "score": 1.0
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "score": 1.0
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "score": 1.0
+      }
+    ],
+    "timeline": [
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "quiz",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "quiz",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "quiz",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "reading",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "quiz",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "quiz",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "quiz",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "reading",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "quiz",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "quiz",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "quiz",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "reading",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "quiz",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "quiz",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "quiz",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "lesson",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "video",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "quiz",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "quiz",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "quiz",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "lesson",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "video",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "quiz",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "quiz",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "quiz",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "lesson",
+        "n_concepts": 1
+      },
+      {
+        "t": "2026-07-28T11:10:46+00:00",
+        "type": "video",
+        "n_concepts": 1
+      }
+    ]
+  },
+  "weak_concepts_seeded": [
+    "Probability Distribution",
+    "Optimizer",
+    "Random Variable"
+  ],
+  "strong_concepts_seeded": [
+    "Structure Sentence",
+    "Clustering",
+    "Activation Function"
+  ]
+}

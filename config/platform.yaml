@@ -1,0 +1,313 @@
+# =============================================================================
+# ALA Platform — central runtime configuration
+# -----------------------------------------------------------------------------
+# Single source of truth for paths, versions, and policy knobs. Every module
+# reads from here via `ala.config.settings.load_settings()`. Nothing that a
+# human might reasonably want to change should be hardcoded in Python.
+#
+# Override the location of this file with the ALA_CONFIG environment variable.
+# =============================================================================
+
+build:
+  # Bumped by hand on releases; surfaced in the Project Context (Task 5).
+  version: "0.1.0"
+  architecture_baseline: "V3"
+  schema_version: "2.0.0"       # ResourceMetadata schema version (see metadata/schema.py)
+
+paths:
+  # All paths are resolved relative to the project root (the directory that
+  # contains this config's parent, i.e. the repo root) unless absolute.
+  knowledge_base_root: "knowledge_base"      # managed tree (raw/ + derived/)
+  raw_dir: "knowledge_base/raw"
+  derived_dir: "knowledge_base/derived"
+  incoming_dir: "knowledge_base/_incoming"
+  quarantine_dir: "knowledge_base/_quarantine"
+  taxonomy_dir: "config/taxonomy"
+  catalog_db: "data/catalog/knowledge_catalog.db"
+  schemas_dir: "knowledge_base/_schemas"
+
+  # Project/Developer context (Tasks 5 & 6)
+  contexts_dir: "contexts"
+  declared_context: "contexts/context.declared.yaml"   # hand-maintained self-knowledge
+  project_context: "contexts/project_context.yaml"      # generated snapshot (live state)
+
+  # The ORIGINAL, untouched corpus. Read-only. The infrastructure never writes
+  # here; migration into knowledge_base/raw is a separate, approval-gated step.
+  legacy_corpus: "KNOWLEDGE BASE"
+
+catalog:
+  # SQLite chosen per Task 3: in-process, zero-infra, ships with Python.
+  # WAL improves concurrent read/write and future dashboard reads.
+  journal_mode: "WAL"
+  # Full metadata JSON is mirrored into a column so no field is ever lost even
+  # if it is not promoted to a queryable column.
+  store_full_json: true
+
+sidecar:
+  # Task 2: metadata is stored BOTH beside the resource and in the catalog.
+  format: "json"                 # json | yaml  (json is the beside-resource default)
+  suffix: ".meta.json"
+
+metadata:
+  # Values a resource may take; validated by the metadata schema.
+  supported_languages: ["en", "ar"]
+  default_language: "en"
+  pipeline_version: "0.1.0"      # stamped into provenance on registration
+
+change_detection:
+  # Which signals decide "has this resource changed?" sha256 is authoritative;
+  # size/mtime are fast pre-filters.
+  strategy: "sha256"             # sha256 | size_mtime
+  hash_chunk_bytes: 1048576      # 1 MiB streaming read
+
+ingestion:
+  # File-validation limits.
+  max_file_mb: 150
+  supported_extensions: [".pdf", ".pptx", ".ppsx", ".docx", ".txt", ".md", ".markdown", ".html", ".htm", ".ipynb"]
+  # How many times a *retryable* stage is retried before it is considered failed.
+  max_retries: 1
+  normalization:
+    unicode_form: "NFC"
+    strip_smart_quotes: true
+    collapse_whitespace: true
+    join_broken_lines: true            # reflow hard-wrapped prose (PDF); skips code/tables
+    remove_repeated_headers_footers: true
+    header_footer_min_page_ratio: 0.5  # a line on >=50% of pages is a header/footer
+  language:
+    default: "en"
+    min_confidence: 0.5
+  academic:
+    # Keyword cues for academic-structure detection (config, not hardcode).
+    week_patterns: ['week\s*0*(\d+)']
+    lecture_patterns: ['lecture\s*0*(\d+)', 'lesson\s*0*(\d+)', 'session\s*0*(\d+)']
+    example_cues: ["example", "e.g.", "for instance", "worked example"]
+    exercise_cues: ["exercise", "practice", "try it", "quiz"]
+    assignment_cues: ["assignment", "homework", "project", "deliverable"]
+    lab_cues: ["lab", "workshop", "hands-on", "practical"]
+    reference_cues: ["reference", "bibliography", "further reading", "citation"]
+
+retrieval:
+  chunking:
+    # Sizes are measured by the injected token counter (default: word-based
+    # approximation; inject tiktoken/HF for exact counts). Parent = context unit,
+    # child = match unit (V3: ~256-token children inside ~700-1100-token parents).
+    parent_target_tokens: 512
+    child_target_tokens: 180
+    child_overlap_tokens: 40
+    min_chunk_tokens: 8
+
+  embedding:
+    # Which embedder the pipeline uses by default. "hashing" is dependency-free
+    # and always available (offline/CI); the transformer models require the
+    # optional [models] extra (sentence-transformers) and download weights once.
+    #   hashing | e5-small | bge-m3 | minilm
+    default_model: "hashing"
+    batch_size: 32
+    normalize: true
+    use_cache: true
+    hashing_dim: 384        # match MiniLM/e5-small so stores are interchangeable
+    device: "cpu"
+
+  vector_store:
+    # Qdrant is the official vector DB. Local mode (a filesystem path) keeps the
+    # platform zero-infra / local-first — no server process. ":memory:" is used
+    # by tests. Collection is created per embedding model to keep dims consistent.
+    provider: "qdrant"
+    location: "data/qdrant"
+    collection: "ala_chunks"
+    distance: "cosine"        # cosine | dot | euclid
+    batch_size: 256
+
+  bm25:
+    location: "data/bm25/chunks"
+    k1: 1.5
+    b: 0.75
+    min_token_len: 2
+
+  hybrid:
+    embedding_model: "e5-small"  # production dense model (upgraded from hashing)
+    top_k: 10
+    candidate_k: 50              # per-arm candidates fused before truncation
+    # BM25 is the stronger arm on this technical corpus (see docs/09), so it is
+    # weighted higher in RRF; dense promotes items it agrees on without dragging
+    # BM25 down. Use 1.0/1.0 for a neutral/semantic corpus.
+    dense_weight: 0.4
+    bm25_weight: 1.0
+    rrf_k: 60                    # RRF constant
+    rerank_enabled: false        # cross-encoder is opt-in
+    rerank_model: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+    rerank_candidates: 50
+
+graph:
+  # Concept graph (Stage 10): SQLite persistence + NetworkX in-memory (V3 §4.4).
+  location: "data/graph/concept_graph.db"
+  min_concept_resources: 2       # a mined keyword must span >= N resources to be a concept
+  max_concepts_per_course: 60
+
+  # Graph Retrieval (Stage 11): concept expansion + graph-aware ranking.
+  retrieval:
+    max_hops: 2                  # traversal depth
+    hop_decay: 0.5               # score decay per hop
+    graph_weight: 0.5            # weight of the graph boost in re-ranking
+    candidate_k: 30              # hybrid candidates fetched + re-ranked
+    top_concepts: 8              # seed concepts kept from linking
+    beam: 24                     # frontier cap per hop
+    max_expanded: 60             # cap on total expanded concepts
+    max_graph_evidence: 15
+    strategy: "weighted_bfs"     # weighted_bfs | bfs
+    min_edge_weight: 0.0         # graph filtering: drop edges below this weight
+    edge_weights:                # relationship-aware traversal (weighted edges)
+      prerequisite: 1.0
+      depends_on: 0.85
+      explains: 0.9
+      related_to: 0.6
+      example_of: 0.55
+      appears_in: 0.7
+      mentioned_in: 0.4
+
+graphrag:
+  # GraphRAG generation layer (Stage 12). The LLM only ever sees the structured
+  # prompt built from the Evidence Package — never raw retrieval output.
+  top_k_chunks: 8           # chunk evidence pulled from graph retrieval
+  context_chunks: 5         # chunks kept in the reasoning context
+  context_concepts: 8       # concepts kept in the reasoning context
+  token_budget: 1800        # context token budget (chunk text)
+  max_chunk_tokens: 320     # truncate a single chunk to this many tokens
+  dedupe_by: "resource_heading"
+  min_confidence: 0.0
+  # Optional external generator (default is the offline extractive-grounded one).
+  # Set base_url + model (or env ALA_LLM_BASE_URL / ALA_LLM_MODEL) to enable an
+  # OpenAI-compatible server (e.g. local Qwen2.5 / vLLM).
+  llm:
+    base_url: ""
+    model: ""
+    api_key: ""
+    temperature: 0.0
+
+research:
+  # Research Mode (Stage 14): confidence-gated web fallback + knowledge growth.
+  min_source_trust: 0.4       # drop web sources below this trust score
+  auto_approve: false         # never grow the KB without approval by default
+  research_track: "research"  # taxonomy home for web-sourced resources
+  research_course: "web"
+  web_search:
+    # provider: wikipedia (no key, reliable, bilingual) | duckduckgo | tavily | google | disabled
+    # Override at runtime with env vars (keys never belong in YAML):
+    #   ALA_RESEARCH_PROVIDER, ALA_RESEARCH_API_KEY, ALA_RESEARCH_GOOGLE_CX, ALA_RESEARCH_MAX_RESULTS
+    provider: "wikipedia"
+    max_results: 6
+    top_sources: 3
+  confidence:
+    threshold: 0.70          # KB confidence below this triggers web research
+    high_threshold: 0.72
+    low_threshold: 0.55
+    bm25_ref: 22.0
+    support_ref: 5
+    # calibrated on the real corpus: only signals that discriminate in/out-of-corpus
+    weights: { semantic: 0.55, agreement: 0.30, bm25: 0.15 }
+  web_search:
+    provider: "disabled"      # disabled | duckduckgo | tavily | google | local
+    api_key: ""               # Tavily / Google key (or env)
+    google_cx: ""             # Google Custom Search engine id
+    max_results: 6
+    top_sources: 3
+
+video:
+  # Video Adapter (Stage 16): videos → timestamped LearningResources via the
+  # existing pipeline. STT/OCR/download backends are optional seams; the offline
+  # default reads standard WebVTT/SRT captions.
+  transcriber: "caption"        # caption | faster-whisper | whisper | disabled
+  whisper_model: "base"
+  ocr: "disabled"               # disabled | tesseract (slide text from frames)
+  segment_target_words: 160     # ~child-chunk-sized scene segments
+  segment_max_gap: 8.0          # seconds pause → new segment
+  ocr_frame_interval: 30.0
+  track: "video"
+  course: "lectures"
+
+vision:
+  # Vision RAG (Stage 17): figures/images → searchable IMAGE_CAPTION blocks.
+  # The offline path lifts real figure/table captions from the corpus text layer;
+  # CLIP/BLIP/tesseract are optional cross-modal seams.
+  encoder: "disabled"           # disabled | clip   (cross-modal image vectors)
+  captioner: "disabled"         # disabled | blip   (image → caption)
+  ocr: "disabled"               # disabled | tesseract (image → text)
+  min_caption_words: 3
+  max_caption_chars: 220
+  track: "vision"
+  course: "figures"
+
+student:
+  # Student Model (Stage 18): persistent learner profile, stored SEPARATELY from
+  # the Knowledge Base (its own SQLite db). Concept mastery is keyed to concept-graph
+  # ids; the retriever personalises toward the learner's weak concepts.
+  location: "data/student/student.db"
+  mastery_k: 0.25             # learning-rate of the mastery update
+  weak_threshold: 0.40        # mastery below → weak concept
+  strong_threshold: 0.70      # mastery above → strong concept
+  personalization:
+    weak_weight: 0.5          # boost for resources teaching the learner's weak concepts
+    pref_weight: 0.2          # boost for language / explanation-style preference match
+    candidate_k: 40           # base results re-ranked
+
+dashboard:
+  # Learning Analytics Dashboard (Stage 19): reads the Student Model + concept graph
+  # + catalog. Time-spent is estimated from event type × typical duration (minutes).
+  typical_minutes: { quiz: 3, exam: 45, lesson: 15, video: 10, reading: 8, interaction: 2 }
+  recommend_k: 6              # number of study recommendations to surface
+
+planner:
+  # Study Planner (Stage 20): goal + deadline + daily time + Student Model → an
+  # adaptive daily schedule (read / watch / practice / quiz / revision).
+  activity_minutes: { read: 15, watch: 12, practice: 20, quiz: 5, revision: 10 }
+  revision_gap_days: 2        # spaced revision inserted N days after first study
+  weak_extra_practice: true   # weak concepts get an extra practice + a revision
+  max_concepts: 40            # cap concepts in one plan
+
+rl:
+  # RL Adaptive Learning (Stage 21): contextual-bandit online policy (NOT LLM
+  # training). Observes mastery + performance, adapts quiz difficulty / explanation
+  # style / question type to maximise learning gain.
+  alpha: 2.5                  # LinUCB exploration strength (needs to sample graded arms across mastery)
+  difficulties: [0.2, 0.35, 0.5, 0.65, 0.8]   # graded arms so the policy can track ability
+  explanation_styles: ["concise", "balanced", "detailed", "example-driven"]
+  question_types: ["recall", "application", "conceptual"]
+  location: "data/rl"         # per-student policy state
+  reward:
+    correct: 0.4              # w_correct
+    mastery_gain: 1.0         # w_gain (the true learning signal)
+    time_penalty: 0.15        # w_time (normalised response time)
+    repeat_mistake: 0.3       # penalty for repeating a wrong concept
+    skip_prerequisite: 0.3    # penalty for studying past an unmet prerequisite
+
+agents:
+  # AI Agents (Stage 22): each agent is a role over the EXISTING services (GraphRAG,
+  # Research, Planner, RL, Student Model) — no duplicated retrieval. Framework is
+  # dependency-free by default; CrewAI is an optional seam.
+  framework: "native"         # native | crewai
+  grade_threshold: 0.4        # key-term recall for a quiz answer to count as correct
+
+tools:
+  # Function Calling (Stage 23): safe tools routed through the EXISTING controllers.
+  # The python/calculator tools run in an AST-validated sandbox with a wall-clock
+  # timeout; knowledge-growing tools stay gated behind the ingestion pipeline.
+  python_timeout: 2.0         # seconds before the sandbox aborts
+  allow_knowledge_update: true
+
+llm:
+  # LLM provider abstraction (production). Connects to a LOCAL Ollama server — no
+  # external APIs. Change `model` to switch models with zero code changes (also
+  # overridable by env: ALA_LLM_PROVIDER / ALA_LLM_MODEL / ALA_LLM_BASE_URL).
+  # If the provider is unreachable, generation gracefully falls back to the
+  # offline extractive-grounded generator (so nothing ever hard-fails).
+  provider: "ollama"          # ollama | openai | none
+  model: "qwen3"              # qwen3 | qwen2.5 | llama3 | mistral | gemma | …
+  base_url: "http://localhost:11434"
+  temperature: 0.2
+  timeout: 120
+  keep_alive: "5m"
+  num_ctx: 8192
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s | %(levelname)-7s | %(name)s | %(message)s"

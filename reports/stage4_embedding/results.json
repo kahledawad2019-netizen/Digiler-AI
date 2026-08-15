@@ -1,0 +1,38 @@
+[
+  {
+    "model": "hashing",
+    "dim": 384,
+    "n": 300,
+    "embed_s": 6.129,
+    "texts/s": 48.9,
+    "compute_mb": 3.6,
+    "bytes/vec": 1536,
+    "query_ms": 3.59,
+    "coherence": 0.2528,
+    "nn_purity": 0.6967
+  },
+  {
+    "model": "minilm",
+    "dim": 384,
+    "n": 300,
+    "embed_s": 5.608,
+    "texts/s": 53.5,
+    "compute_mb": 4.0,
+    "bytes/vec": 1536,
+    "query_ms": 44.08,
+    "coherence": 0.2847,
+    "nn_purity": 0.6267
+  },
+  {
+    "model": "e5-small",
+    "dim": 384,
+    "n": 300,
+    "embed_s": 13.934,
+    "texts/s": 21.5,
+    "compute_mb": 4.3,
+    "bytes/vec": 1536,
+    "query_ms": 72.83,
+    "coherence": 0.0724,
+    "nn_purity": 0.74
+  }
+]

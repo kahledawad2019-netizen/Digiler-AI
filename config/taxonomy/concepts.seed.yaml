@@ -1,0 +1,38 @@
+# =============================================================================
+# Concept Graph seed (approved KB redesign, Step 3 §7)
+# -----------------------------------------------------------------------------
+# Seeds the future Graph RAG concept-mining stage (G1) and fixes audit finding
+# KB-08 (no syllabus file existed). Concept nodes are MULTILINGUAL by
+# construction so an Arabic rendering of a lesson attaches to the SAME node
+# instead of forking the graph by language.
+#
+# This file is intentionally a small, curated seed — not the full graph. The
+# graph builder (a later phase) expands it. It is placed here now so the
+# metadata layer can already reference concept_ids.
+# =============================================================================
+
+concepts:
+  - concept_id: "c.sql.foreign-key"
+    canonical: { en: "Foreign Key", ar: "المفتاح الأجنبي" }
+    aliases: { en: ["FK", "foreign key constraint"], ar: [] }
+    subject: "dmv"
+
+  - concept_id: "c.sql.primary-key"
+    canonical: { en: "Primary Key", ar: "المفتاح الأساسي" }
+    aliases: { en: ["PK"], ar: [] }
+    subject: "dmv"
+
+  - concept_id: "c.ml.knn"
+    canonical: { en: "K-Nearest Neighbors", ar: "أقرب الجيران" }
+    aliases: { en: ["KNN", "k-NN"], ar: [] }
+    subject: "aiml"
+
+  - concept_id: "c.ml.linear-regression"
+    canonical: { en: "Linear Regression", ar: "الانحدار الخطي" }
+    aliases: { en: ["OLS"], ar: [] }
+    subject: "aiml"
+
+  - concept_id: "c.dm.clustering"
+    canonical: { en: "Clustering", ar: "التجميع" }
+    aliases: { en: ["cluster analysis"], ar: [] }
+    subject: "dmv"

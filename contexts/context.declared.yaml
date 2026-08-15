@@ -1,0 +1,95 @@
+# =============================================================================
+# ALA — Declared self-knowledge (input to the Project Context, Task 5)
+# -----------------------------------------------------------------------------
+# The parts of the platform's self-description that a human declares (component
+# roster + statuses, model choices, subsystem statuses). The ProjectContext
+# service MERGES this with LIVE state read from the catalog + taxonomy to produce
+# contexts/project_context.yaml. Update a component's status here (one line) as
+# milestones land — no code change.
+#
+# status ∈ {planned, in_progress, implemented, deferred}
+# =============================================================================
+
+configuration:
+  vector_store: "Qdrant (local mode; supersedes ChromaDB per current directive)"
+  vector_store_status: implemented
+  embedding_model: "intfloat/multilingual-e5-small"   # bge-m3 = higher tier (V3)
+  embedding_status: implemented
+  llm: "Qwen2.5 (tiered)"
+  llm_status: planned
+  retrieval_strategy: "hybrid: dense + BM25 + concept-graph, fused with RRF (V3 §5)"
+  graph_status: implemented
+  student_model_status: implemented
+  reinforcement_learning_status: implemented
+  evaluation_status: planned
+
+# kind ∈ {module, agent, tool, stage, policy, subsystem}
+components:
+  # --- foundation (built) ---
+  - { name: "Metadata System",        kind: module,    status: implemented, phase: "M1" }
+  - { name: "Knowledge Catalog",      kind: module,    status: implemented, phase: "M1" }
+  - { name: "Resource Registry",      kind: module,    status: implemented, phase: "M1" }
+  - { name: "Change Detection",       kind: module,    status: implemented, phase: "M1" }
+  - { name: "Validation Pipeline",    kind: stage,     status: implemented, phase: "M1" }
+  - { name: "Resource Fabric",        kind: module,    status: implemented, phase: "M1.5" }
+  - { name: "Project Context",        kind: module,    status: implemented, phase: "M2" }
+  - { name: "Ingestion Pipeline",     kind: module,    status: implemented, phase: "M3" }
+  - { name: "Corpus Importer",         kind: module,    status: implemented, phase: "M3.5" }
+  - { name: "Document IR (DIR)",       kind: module,    status: implemented, phase: "M4.1" }
+  - { name: "Parent-Child Chunking",   kind: module,    status: implemented, phase: "M4.2" }
+
+  # --- Retrieval Engine — in progress (mandatory order) ---
+  - { name: "Embedding Pipeline",      kind: module,    status: implemented, phase: "Stage 4" }
+  - { name: "Qdrant Vector Store",     kind: module,    status: implemented, phase: "Stage 5" }
+  - { name: "BM25 Index",              kind: module,    status: implemented, phase: "Stage 6" }
+  - { name: "Hybrid Retrieval",        kind: stage,     status: implemented, phase: "Stage 7" }
+  - { name: "Retrieval Evaluation",    kind: subsystem, status: implemented, phase: "Stage 8" }
+  - { name: "Cross-Encoder Reranker",  kind: tool,      status: implemented, phase: "Stage 7" }
+  - { name: "Evidence Package",        kind: module,    status: implemented, phase: "Stage 9" }
+  - { name: "Graph Retrieval",         kind: stage,     status: implemented, phase: "Stage 11" }
+  - { name: "GraphRAG",                kind: stage,     status: implemented, phase: "Stage 12" }
+  - { name: "GraphRAG Evaluation",     kind: subsystem, status: implemented, phase: "Stage 13" }
+  - { name: "Research Mode",           kind: stage,     status: implemented, phase: "Stage 14" }
+  - { name: "Citation Explorer",       kind: subsystem, status: implemented, phase: "Stage 15" }
+  - { name: "Video Adapter",           kind: stage,     status: implemented, phase: "Stage 16" }
+  - { name: "Vision RAG",              kind: stage,     status: implemented, phase: "Stage 17" }
+  - { name: "Learning Analytics Dashboard", kind: subsystem, status: implemented, phase: "Stage 19" }
+  - { name: "Study Session Planner",   kind: subsystem, status: implemented, phase: "Stage 20" }
+
+  # --- agents (V3 §8) ---
+  - { name: "AI Agents (Crew)",       kind: subsystem, status: implemented, phase: "Stage 22" }
+  - { name: "Learning Agent",         kind: agent,     status: implemented, phase: "Stage 22" }   # = Tutor Agent
+  - { name: "Summarization Agent",    kind: agent,     status: planned, phase: "P2" }
+  - { name: "Tutor Agent",            kind: agent,     status: implemented, phase: "Stage 22" }
+  - { name: "Quiz Agent",             kind: agent,     status: implemented, phase: "Stage 22" }
+  - { name: "Evaluator Agent",        kind: agent,     status: implemented, phase: "Stage 22" }
+  - { name: "Planner Agent",          kind: agent,     status: implemented, phase: "Stage 22" }
+  - { name: "Research Agent",         kind: agent,     status: implemented, phase: "Stage 22" }
+  - { name: "Knowledge Curator Agent", kind: agent,    status: implemented, phase: "Stage 22" }
+  - { name: "Coordinator Agent",      kind: agent,     status: implemented, phase: "Stage 22" }
+  - { name: "Flashcard Agent",        kind: agent,     status: planned, phase: "P2" }
+  - { name: "Coach Agent",            kind: agent,     status: planned, phase: "P5" }
+
+  # --- stages ---
+  - { name: "Tiered Router",          kind: stage,     status: planned, phase: "P2" }
+  - { name: "Verifier",               kind: stage,     status: planned, phase: "P2" }
+  - { name: "Evidence Acquisition Policy", kind: policy, status: planned, phase: "P6" }
+
+  # --- tools (V3 §8) ---
+  - { name: "Dense Retriever",        kind: tool,      status: implemented, phase: "Stage 7" }
+  - { name: "BM25 Retriever",         kind: tool,      status: implemented, phase: "Stage 6" }
+  - { name: "Graph Retriever",        kind: tool,      status: implemented, phase: "Stage 11" }
+  - { name: "Web Search",             kind: tool,      status: implemented, phase: "Stage 14" }
+  - { name: "Video Ingestion",        kind: tool,      status: implemented, phase: "Stage 16" }
+  - { name: "Transcriber (faster-whisper)", kind: tool, status: implemented, phase: "Stage 16" }
+  - { name: "NLI Checker",            kind: tool,      status: planned, phase: "P2" }
+  - { name: "Function Calling",       kind: subsystem, status: implemented, phase: "Stage 23" }
+  - { name: "Safe Tools (calc/python/pdf/video/calendar)", kind: tool, status: implemented, phase: "Stage 23" }
+
+  # --- subsystems ---
+  - { name: "Concept Graph",          kind: subsystem, status: implemented, phase: "Stage 10" }
+  - { name: "Student Model",          kind: subsystem, status: implemented, phase: "Stage 18" }
+  - { name: "RL: Quiz Bandit",        kind: policy,    status: implemented, phase: "Stage 21" }
+  - { name: "RL: Review Scheduler",   kind: policy,    status: planned, phase: "P5" }
+  - { name: "RL Adaptive Learning",   kind: subsystem, status: implemented, phase: "Stage 21" }
+  - { name: "Evaluation Harness",     kind: subsystem, status: planned, phase: "P1" }

@@ -1,0 +1,221 @@
+{
+  "setup": {
+    "corpus_nodes": 1511,
+    "corpus_edges": 5091,
+    "n_retrieval": 80,
+    "n_graphrag": 40,
+    "generator": "extractive-grounded"
+  },
+  "known_item": [
+    {
+      "retriever": "dense",
+      "n": 80,
+      "Hit@1": 0.7,
+      "Hit@5": 0.812,
+      "Hit@10": 0.85,
+      "Recall@10": 0.006,
+      "P@5": 0.54,
+      "MRR": 0.751,
+      "MAP": 0.003,
+      "nDCG@10": 0.542,
+      "latency_ms": 91.38,
+      "qps": 10.9
+    },
+    {
+      "retriever": "bm25",
+      "n": 80,
+      "Hit@1": 0.95,
+      "Hit@5": 1.0,
+      "Hit@10": 1.0,
+      "Recall@10": 0.012,
+      "P@5": 0.705,
+      "MRR": 0.967,
+      "MAP": 0.011,
+      "nDCG@10": 0.708,
+      "latency_ms": 22.26,
+      "qps": 44.9
+    },
+    {
+      "retriever": "hybrid",
+      "n": 80,
+      "Hit@1": 0.9,
+      "Hit@5": 0.988,
+      "Hit@10": 1.0,
+      "Recall@10": 0.012,
+      "P@5": 0.707,
+      "MRR": 0.932,
+      "MAP": 0.01,
+      "nDCG@10": 0.706,
+      "latency_ms": 115.95,
+      "qps": 8.6
+    },
+    {
+      "retriever": "graph",
+      "n": 80,
+      "Hit@1": 0.9,
+      "Hit@5": 0.988,
+      "Hit@10": 1.0,
+      "Recall@10": 0.013,
+      "P@5": 0.715,
+      "MRR": 0.932,
+      "MAP": 0.011,
+      "nDCG@10": 0.717,
+      "latency_ms": 120.81,
+      "qps": 8.3
+    }
+  ],
+  "related_passage": [
+    {
+      "retriever": "dense",
+      "n": 80,
+      "Hit@1": 0.55,
+      "Hit@5": 0.738,
+      "Hit@10": 0.787,
+      "Recall@10": 0.003,
+      "P@5": 0.497,
+      "MRR": 0.634,
+      "MAP": 0.002,
+      "nDCG@10": 0.497,
+      "latency_ms": 90.33,
+      "qps": 11.1
+    },
+    {
+      "retriever": "bm25",
+      "n": 80,
+      "Hit@1": 0.675,
+      "Hit@5": 0.85,
+      "Hit@10": 0.938,
+      "Recall@10": 0.007,
+      "P@5": 0.63,
+      "MRR": 0.754,
+      "MAP": 0.006,
+      "nDCG@10": 0.634,
+      "latency_ms": 24.01,
+      "qps": 41.7
+    },
+    {
+      "retriever": "hybrid",
+      "n": 80,
+      "Hit@1": 0.688,
+      "Hit@5": 0.875,
+      "Hit@10": 0.925,
+      "Recall@10": 0.007,
+      "P@5": 0.635,
+      "MRR": 0.764,
+      "MAP": 0.005,
+      "nDCG@10": 0.641,
+      "latency_ms": 127.35,
+      "qps": 7.9
+    },
+    {
+      "retriever": "graph",
+      "n": 80,
+      "Hit@1": 0.688,
+      "Hit@5": 0.887,
+      "Hit@10": 0.925,
+      "Recall@10": 0.007,
+      "P@5": 0.645,
+      "MRR": 0.768,
+      "MAP": 0.005,
+      "nDCG@10": 0.655,
+      "latency_ms": 133.75,
+      "qps": 7.5
+    }
+  ],
+  "graphrag": {
+    "full": {
+      "context_precision": 0.5754,
+      "context_recall": 1.0,
+      "citation_accuracy": 1.0,
+      "grounding": 1.0,
+      "faithfulness": 0.9917,
+      "multi_hop": 1.0,
+      "hallucination": 0.0,
+      "completeness": 0.7925,
+      "tokens": 344.225
+    },
+    "no_graph_evidence": {
+      "context_precision": 0.5754,
+      "context_recall": 1.0,
+      "citation_accuracy": 1.0,
+      "grounding": 1.0,
+      "faithfulness": 0.9917,
+      "multi_hop": 0.0,
+      "hallucination": 0.0,
+      "completeness": 0.7925,
+      "tokens": 344.225
+    }
+  },
+  "ablation": [
+    {
+      "arm": "dense only (no BM25, no RRF)",
+      "task": "related-passage",
+      "Hit@1": 0.5,
+      "MRR": 0.59,
+      "nDCG@10": 0.458,
+      "latency_ms": 101.32,
+      "disables": "BM25 + fusion"
+    },
+    {
+      "arm": "BM25 only (no dense, no RRF)",
+      "task": "related-passage",
+      "Hit@1": 0.65,
+      "MRR": 0.727,
+      "nDCG@10": 0.619,
+      "latency_ms": 23.45,
+      "disables": "dense + fusion"
+    },
+    {
+      "arm": "hybrid (RRF fusion)",
+      "task": "related-passage",
+      "Hit@1": 0.65,
+      "MRR": 0.726,
+      "nDCG@10": 0.62,
+      "latency_ms": 130.23,
+      "disables": "—"
+    },
+    {
+      "arm": "hybrid + cross-encoder",
+      "task": "related-passage",
+      "Hit@1": 0.65,
+      "MRR": 0.726,
+      "nDCG@10": 0.62,
+      "latency_ms": 126.58,
+      "disables": "reranker off→on"
+    },
+    {
+      "arm": "graph, expansion OFF (0-hop)",
+      "task": "related-passage",
+      "Hit@1": 0.65,
+      "MRR": 0.726,
+      "nDCG@10": 0.63,
+      "latency_ms": 126.13,
+      "disables": "graph expansion"
+    },
+    {
+      "arm": "graph, expansion ON (2-hop)",
+      "task": "related-passage",
+      "Hit@1": 0.65,
+      "MRR": 0.726,
+      "nDCG@10": 0.63,
+      "latency_ms": 129.48,
+      "disables": "—"
+    },
+    {
+      "arm": "GraphRAG, graph-evidence OFF",
+      "task": "graphrag",
+      "multi_hop": 0.0,
+      "grounding": 1.0,
+      "context_precision": 0.5754,
+      "disables": "graph evidence"
+    },
+    {
+      "arm": "GraphRAG, graph-evidence ON",
+      "task": "graphrag",
+      "multi_hop": 1.0,
+      "grounding": 1.0,
+      "context_precision": 0.5754,
+      "disables": "—"
+    }
+  ]
+}

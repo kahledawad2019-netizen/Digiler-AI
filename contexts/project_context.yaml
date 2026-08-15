@@ -1,0 +1,379 @@
+build_version: 0.1.0
+architecture_baseline: V3
+schema_version: 2.0.0
+generated_at: '2026-07-28T17:20:46+00:00'
+configuration:
+  vector_store: Qdrant (local mode; supersedes ChromaDB per current directive)
+  vector_store_status: implemented
+  embedding_model: intfloat/multilingual-e5-small
+  embedding_status: implemented
+  llm: Qwen2.5 (tiered)
+  llm_status: planned
+  retrieval_strategy: 'hybrid: dense + BM25 + concept-graph, fused with RRF (V3 §5)'
+  graph_status: implemented
+  student_model_status: implemented
+  reinforcement_learning_status: implemented
+  evaluation_status: planned
+components:
+- name: Metadata System
+  kind: module
+  status: implemented
+  phase: M1
+  notes: null
+- name: Knowledge Catalog
+  kind: module
+  status: implemented
+  phase: M1
+  notes: null
+- name: Resource Registry
+  kind: module
+  status: implemented
+  phase: M1
+  notes: null
+- name: Change Detection
+  kind: module
+  status: implemented
+  phase: M1
+  notes: null
+- name: Validation Pipeline
+  kind: stage
+  status: implemented
+  phase: M1
+  notes: null
+- name: Resource Fabric
+  kind: module
+  status: implemented
+  phase: M1.5
+  notes: null
+- name: Project Context
+  kind: module
+  status: implemented
+  phase: M2
+  notes: null
+- name: Ingestion Pipeline
+  kind: module
+  status: implemented
+  phase: M3
+  notes: null
+- name: Corpus Importer
+  kind: module
+  status: implemented
+  phase: M3.5
+  notes: null
+- name: Document IR (DIR)
+  kind: module
+  status: implemented
+  phase: M4.1
+  notes: null
+- name: Parent-Child Chunking
+  kind: module
+  status: implemented
+  phase: M4.2
+  notes: null
+- name: Embedding Pipeline
+  kind: module
+  status: implemented
+  phase: Stage 4
+  notes: null
+- name: Qdrant Vector Store
+  kind: module
+  status: implemented
+  phase: Stage 5
+  notes: null
+- name: BM25 Index
+  kind: module
+  status: implemented
+  phase: Stage 6
+  notes: null
+- name: Hybrid Retrieval
+  kind: stage
+  status: implemented
+  phase: Stage 7
+  notes: null
+- name: Retrieval Evaluation
+  kind: subsystem
+  status: implemented
+  phase: Stage 8
+  notes: null
+- name: Cross-Encoder Reranker
+  kind: tool
+  status: implemented
+  phase: Stage 7
+  notes: null
+- name: Evidence Package
+  kind: module
+  status: implemented
+  phase: Stage 9
+  notes: null
+- name: Graph Retrieval
+  kind: stage
+  status: implemented
+  phase: Stage 11
+  notes: null
+- name: GraphRAG
+  kind: stage
+  status: implemented
+  phase: Stage 12
+  notes: null
+- name: GraphRAG Evaluation
+  kind: subsystem
+  status: implemented
+  phase: Stage 13
+  notes: null
+- name: Research Mode
+  kind: stage
+  status: implemented
+  phase: Stage 14
+  notes: null
+- name: Citation Explorer
+  kind: subsystem
+  status: implemented
+  phase: Stage 15
+  notes: null
+- name: Video Adapter
+  kind: stage
+  status: implemented
+  phase: Stage 16
+  notes: null
+- name: Vision RAG
+  kind: stage
+  status: implemented
+  phase: Stage 17
+  notes: null
+- name: Learning Analytics Dashboard
+  kind: subsystem
+  status: implemented
+  phase: Stage 19
+  notes: null
+- name: Study Session Planner
+  kind: subsystem
+  status: implemented
+  phase: Stage 20
+  notes: null
+- name: AI Agents (Crew)
+  kind: subsystem
+  status: implemented
+  phase: Stage 22
+  notes: null
+- name: Learning Agent
+  kind: agent
+  status: implemented
+  phase: Stage 22
+  notes: null
+- name: Summarization Agent
+  kind: agent
+  status: planned
+  phase: P2
+  notes: null
+- name: Tutor Agent
+  kind: agent
+  status: implemented
+  phase: Stage 22
+  notes: null
+- name: Quiz Agent
+  kind: agent
+  status: implemented
+  phase: Stage 22
+  notes: null
+- name: Evaluator Agent
+  kind: agent
+  status: implemented
+  phase: Stage 22
+  notes: null
+- name: Planner Agent
+  kind: agent
+  status: implemented
+  phase: Stage 22
+  notes: null
+- name: Research Agent
+  kind: agent
+  status: implemented
+  phase: Stage 22
+  notes: null
+- name: Knowledge Curator Agent
+  kind: agent
+  status: implemented
+  phase: Stage 22
+  notes: null
+- name: Coordinator Agent
+  kind: agent
+  status: implemented
+  phase: Stage 22
+  notes: null
+- name: Flashcard Agent
+  kind: agent
+  status: planned
+  phase: P2
+  notes: null
+- name: Coach Agent
+  kind: agent
+  status: planned
+  phase: P5
+  notes: null
+- name: Tiered Router
+  kind: stage
+  status: planned
+  phase: P2
+  notes: null
+- name: Verifier
+  kind: stage
+  status: planned
+  phase: P2
+  notes: null
+- name: Evidence Acquisition Policy
+  kind: policy
+  status: planned
+  phase: P6
+  notes: null
+- name: Dense Retriever
+  kind: tool
+  status: implemented
+  phase: Stage 7
+  notes: null
+- name: BM25 Retriever
+  kind: tool
+  status: implemented
+  phase: Stage 6
+  notes: null
+- name: Graph Retriever
+  kind: tool
+  status: implemented
+  phase: Stage 11
+  notes: null
+- name: Web Search
+  kind: tool
+  status: implemented
+  phase: Stage 14
+  notes: null
+- name: Video Ingestion
+  kind: tool
+  status: implemented
+  phase: Stage 16
+  notes: null
+- name: Transcriber (faster-whisper)
+  kind: tool
+  status: implemented
+  phase: Stage 16
+  notes: null
+- name: NLI Checker
+  kind: tool
+  status: planned
+  phase: P2
+  notes: null
+- name: Function Calling
+  kind: subsystem
+  status: implemented
+  phase: Stage 23
+  notes: null
+- name: Safe Tools (calc/python/pdf/video/calendar)
+  kind: tool
+  status: implemented
+  phase: Stage 23
+  notes: null
+- name: Concept Graph
+  kind: subsystem
+  status: implemented
+  phase: Stage 10
+  notes: null
+- name: Student Model
+  kind: subsystem
+  status: implemented
+  phase: Stage 18
+  notes: null
+- name: 'RL: Quiz Bandit'
+  kind: policy
+  status: implemented
+  phase: Stage 21
+  notes: null
+- name: 'RL: Review Scheduler'
+  kind: policy
+  status: planned
+  phase: P5
+  notes: null
+- name: RL Adaptive Learning
+  kind: subsystem
+  status: implemented
+  phase: Stage 21
+  notes: null
+- name: Evaluation Harness
+  kind: subsystem
+  status: planned
+  phase: P1
+  notes: null
+agents:
+- Learning Agent
+- Summarization Agent
+- Tutor Agent
+- Quiz Agent
+- Evaluator Agent
+- Planner Agent
+- Research Agent
+- Knowledge Curator Agent
+- Coordinator Agent
+- Flashcard Agent
+- Coach Agent
+tools:
+- Cross-Encoder Reranker
+- Dense Retriever
+- BM25 Retriever
+- Graph Retriever
+- Web Search
+- Video Ingestion
+- Transcriber (faster-whisper)
+- NLI Checker
+- Safe Tools (calc/python/pdf/video/calendar)
+courses:
+- track: technical
+  course: dmv
+  title: Data Mining and Visualization
+  modules: 12
+- track: technical
+  course: aiml
+  title: Introduction to AI and Machine Learning
+  modules: 11
+- track: technical
+  course: agentic-ai
+  title: Agentic AI (Data Analysis / Software Dev)
+  modules: 1
+- track: technical
+  course: applied-dl
+  title: Applied Deep Learning
+  modules: 1
+- track: technical
+  course: applied-stats
+  title: Applied Statistics
+  modules: 1
+- track: technical
+  course: excel-ai
+  title: Excel with AI Tools
+  modules: 1
+- track: nontechnical
+  course: eng
+  title: Business English (Berlitz Digilians)
+  modules: 1
+knowledge_base:
+  total_resources: 257
+  total_bytes: 624104649
+  indexed: 0
+  pending: 51
+  by_course:
+    agentic-ai: 12
+    aiml: 27
+    applied-dl: 40
+    applied-stats: 50
+    dmv: 37
+    eng: 30
+    excel-ai: 61
+  by_language:
+    en: 257
+  by_processing_status:
+    embedded: 206
+    pending: 51
+  by_doc_type:
+    dataset: 51
+    lecture_slides: 41
+    lesson_page: 128
+    notebook: 34
+    other: 1
+    web: 2
+  last_updated: '2026-07-28T17:20:46+00:00'

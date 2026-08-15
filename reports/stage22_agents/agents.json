@@ -1,0 +1,724 @@
+{
+  "n_agents": 7,
+  "framework": "native",
+  "routing": {
+    "n": 12,
+    "accuracy": 1.0,
+    "detail": [
+      {
+        "request": "quiz me on gradient descent",
+        "expected": "quiz",
+        "routed": "quiz"
+      },
+      {
+        "request": "test me with a practice question",
+        "expected": "quiz",
+        "routed": "quiz"
+      },
+      {
+        "request": "make a study plan for my exam",
+        "expected": "planner",
+        "routed": "planner"
+      },
+      {
+        "request": "schedule my revision",
+        "expected": "planner",
+        "routed": "planner"
+      },
+      {
+        "request": "explain what a convolutional neural network is",
+        "expected": "tutor",
+        "routed": "tutor"
+      },
+      {
+        "request": "what is a foreign key",
+        "expected": "tutor",
+        "routed": "tutor"
+      },
+      {
+        "request": "research the latest advances in retrieval augmented generation",
+        "expected": "research",
+        "routed": "research"
+      },
+      {
+        "request": "find out about diffusion models",
+        "expected": "research",
+        "routed": "research"
+      },
+      {
+        "request": "search the web for transformer tutorials",
+        "expected": "web_research",
+        "routed": "web_research"
+      },
+      {
+        "request": "ingest this page into the knowledge base",
+        "expected": "knowledge_curator",
+        "routed": "knowledge_curator"
+      },
+      {
+        "request": "how does k-means clustering work",
+        "expected": "tutor",
+        "routed": "tutor"
+      },
+      {
+        "request": "give me a practice question on SQL joins",
+        "expected": "quiz",
+        "routed": "quiz"
+      }
+    ]
+  },
+  "tutor": {
+    "mean_grounding": 1.0,
+    "mean_latency_ms": 224.7
+  },
+  "quiz_eval": {
+    "n_concepts": 8,
+    "good_answer_accuracy": 1.0,
+    "bad_answer_rejection": 1.0,
+    "discrimination": 1.0
+  },
+  "study": {
+    "sessions": 3,
+    "all_completed": true,
+    "example": {
+      "concept": "concept:probability-distribution",
+      "transcript": [
+        {
+          "agent": "Tutor",
+          "role": "tutor",
+          "output": "(concise explanation) Key concepts: Probability Distribution [K1], Regression Analysis [K2], Neural Network [K3]. [C1] We also discuss three frequently occurring probability distribu- tions: the binomial, hypergeometric, and Poisson.",
+          "data": {
+            "grounding": 1.0,
+            "confidence": 0.9151,
+            "explanation_style": "concise"
+          },
+          "citations": [
+            {
+              "cid": "K1",
+              "kind": "concept",
+              "label": "Probability Distribution",
+              "resource_id": "technical.aiml.knowledge-basemachin.lecture4-data-data-manipulation",
+              "source_type": "concept",
+              "page": null,
+              "slide": null,
+              "timestamp": null,
+              "confidence": 1.0
+            },
+            {
+              "cid": "K2",
+              "kind": "concept",
+              "label": "Regression Analysis",
+              "resource_id": "technical.aiml.knowledge-basemachin.knn",
+              "source_type": "concept",
+              "page": null,
+              "slide": null,
+              "timestamp": null,
+              "confidence": 1.0
+            },
+            {
+              "cid": "K3",
+              "kind": "concept",
+              "label": "Neural Network",
+              "resource_id": "technical.agentic-ai.w01.introduction-to-agentic-ai-week1",
+              "source_type": "concept",
+              "page": null,
+              "slide": null,
+              "timestamp": null,
+              "confidence": 1.0
+            },
+            {
+              "cid": "C1",
+              "kind": "chunk",
+              "label": "[lind-william-marchal-samuel-wathen-statistical-techniques-in, p.218]",
+              "resource_id": "technical.applied-stats.knowledge-basemachin.lind-william-marchal-samuel-wathen-statistical-techniques-in",
+              "source_type": "pdf",
+              "page": 218,
+              "slide": null,
+              "timestamp": null,
+              "confidence": 0.9448
+            }
+          ],
+          "tools_used": [
+            "retrieval_qa",
+            "adaptive_policy"
+          ]
+        },
+        {
+          "agent": "Quiz",
+          "role": "quiz",
+          "output": "[very-easy] Define the concept of 'concept:probability-distribution'.",
+          "data": {
+            "question": "Define the concept of 'concept:probability-distribution'.",
+            "answer_key": "We also discuss three frequently occurring probability distribu- tions: the binomial, hypergeometric, and Poisson.",
+            "key_terms": [
+              "probability-distribution",
+              "concept",
+              "hypergeometric",
+              "probability",
+              "frequently",
+              "distribu-",
+              "occurring",
+              "binomial"
+            ],
+            "source": "[lind-william-marchal-samuel-wathen-statistical-techniques-in, p.218]",
+            "difficulty": "very-easy",
+            "explanation_style": "concise",
+            "concept": "concept:probability-distribution",
+            "choice": {
+              "decision": "difficulty",
+              "action_index": 0,
+              "action": "very-easy",
+              "context": [
+                0.3,
+                0.5,
+                0.0,
+                1.0
+              ],
+              "difficulty": 0.2
+            }
+          },
+          "citations": [],
+          "tools_used": [
+            "adaptive_policy",
+            "evidence",
+            "quiz_gen"
+          ]
+        },
+        {
+          "agent": "Evaluator",
+          "role": "evaluator",
+          "output": "Correct — you covered the key ideas (binomial, distribu-, frequently, hypergeometric).",
+          "data": {
+            "correct": true,
+            "score": 0.75,
+            "covered": [
+              "binomial",
+              "distribu-",
+              "frequently",
+              "hypergeometric",
+              "occurring",
+              "probability"
+            ],
+            "missing": [
+              "concept",
+              "probability-distribution"
+            ],
+            "feedback": "Correct — you covered the key ideas (binomial, distribu-, frequently, hypergeometric).",
+            "recorded": {
+              "reward": 0.4725,
+              "mastery_before": 0.3,
+              "mastery_after": 0.4225,
+              "difficulty": "very-easy"
+            }
+          },
+          "citations": [],
+          "tools_used": [
+            "grade",
+            "record_outcome"
+          ]
+        },
+        {
+          "agent": "Planner",
+          "role": "planner",
+          "output": "Study plan: 11 days, 589 min total.",
+          "data": {
+            "plan": {
+              "goal": "master my weak concepts",
+              "days": [
+                {
+                  "day": 1,
+                  "minutes": 59,
+                  "activities": [
+                    {
+                      "type": "read",
+                      "concept": "Optimizer",
+                      "concept_id": "concept:optimizer",
+                      "minutes": 21,
+                      "resource_id": "nontechnical.eng.general.session-12-make-or-change-an-appointment-by-email-updated-2",
+                      "title": "session-12-make-or-change-an-appointment-by-email-updated-2"
+                    },
+                    {
+                      "type": "quiz",
+                      "concept": "Optimizer",
+                      "concept_id": "concept:optimizer",
+                      "minutes": 5,
+                      "resource_id": "",
+                      "title": ""
+                    },
+                    {
+                      "type": "practice",
+                      "concept": "Optimizer",
+                      "concept_id": "concept:optimizer",
+                      "minutes": 28,
+                      "resource_id": "technical.aiml.knowledge-basemachin.week12-neural-networks-lab-1-1",
+                      "title": "week12-neural-networks-lab-1-1"
+                    },
+                    {
+                      "type": "quiz",
+                      "concept": "Deep Learning",
+                      "concept_id": "concept:deep-learning",
+                      "minutes": 5,
+                      "resource_id": "",
+                      "title": ""
+                    }
+                  ]
+                },
+                {
+                  "day": 2,
+                  "minutes": 59,
+                  "activities": [
+                    {
+                      "type": "read",
+                      "concept": "Deep Learning",
+                      "concept_id": "concept:deep-learning",
+                      "minutes": 21,
+                      "resource_id": "technical.agentic-ai.w01.introduction-to-agentic-ai-week1",
+                      "title": "introduction-to-agentic-ai-week1"
+                    },
+                    {
+                      "type": "practice",
+                      "concept": "Deep Learning",
+                      "concept_id": "concept:deep-learning",
+                      "minutes": 28,
+                      "resource_id": "technical.applied-dl.w02.linear-regression-with-one-neuron",
+                      "title": "linear-regression-with-one-neuron"
+                    },
+                    {
+                      "type": "quiz",
+                      "concept": "Engineering Mathematics",
+                      "concept_id": "concept:engineering-mathematics",
+                      "minutes": 5,
+                      "resource_id": "",
+                      "title": ""
+                    },
+                    {
+                      "type": "quiz",
+                      "concept": "Machine Learning",
+                      "concept_id": "concept:machine-learning",
+                      "minutes": 5,
+                      "resource_id": "",
+                      "title": ""
+                    }
+                  ]
+                },
+                {
+                  "day": 3,
+                  "minutes": 57,
+                  "activities": [
+                    {
+                      "type": "read",
+                      "concept": "Engineering Mathematics",
+                      "concept_id": "concept:engineering-mathematics",
+                      "minutes": 21,
+                      "resource_id": "technical.applied-stats.knowledge-basemachin.probability-theory",
+                      "title": "probability-theory"
+                    },
+                    {
+                      "type": "read",
+                      "concept": "Machine Learning",
+                      "concept_id": "concept:machine-learning",
+                      "minutes": 21,
+                      "resource_id": "technical.agentic-ai.w01.introduction-to-agentic-ai-week1",
+                      "title": "introduction-to-agentic-ai-week1"
+                    },
+                    {
+                      "type": "quiz",
+                      "concept": "AI Agent",
+                      "concept_id": "concept:ai-agent",
+                      "minutes": 5,
+                      "resource_id": "",
+                      "title": ""
+                    },
+                    {
+                      "type": "quiz",
+                      "concept": "Activation Function",
+                      "concept_id": "concept:activation-function",
+                      "minutes": 5,
+                      "resource_id": "",
+                      "title": ""
+                    },
+                    {
+                      "type": "quiz",
+                      "concept": "Regularization",
+                      "concept_id": "concept:regularization",
+                      "minutes": 5,
+                      "resource_id": "",
+                      "title": ""
+                    }
+                  ]
+                },
+                {
+                  "day": 4,
+                  "minutes": 59,
+                  "activities": [
+                    {
+                      "type": "practice",
+                      "concept": "Machine Learning",
+                      "concept_id": "concept:machine-learning",
+                      "minutes": 28,
+                      "resource_id": "technical.aiml.knowledge-basemachin.decisiontree",
+                      "title": "decisiontree"
+                    },
+                    {
+                      "type": "read",
+                      "concept": "AI Agent",
+                      "concept_id": "concept:ai-agent",
+                      "minutes": 21,
+                      "resource_id": "nontechnical.eng.general.session-22-talk-about-your-colleagues-responsibilities-updat",
+                      "title": "session-22-talk-about-your-colleagues-responsibilities-updat"
+                    },
+                    {
+                      "type": "quiz",
+                      "concept": "Regression Analysis",
+                      "concept_id": "concept:regression-analysis",
+                      "minutes": 5,
+                      "resource_id": "",
+                      "title": ""
+                    },
+                    {
+                      "type": "quiz",
+                      "concept": "Probability Distribution",
+                      "concept_id": "concept:probability-distribution",
+                      "minutes": 5,
+                      "resource_id": "",
+                      "title": ""
+                    }
+                  ]
+                },
+                {
+                  "day": 5,
+                  "minutes": 59,
+                  "activities": [
+                    {
+                      "type": "read",
+                      "concept": "Activation Function",
+                      "concept_id": "concept:activation-function",
+                      "minutes": 21,
+                      "resource_id": "technical.aiml.knowledge-basemachin.lecture11-neural-network-systems",
+                      "title": "lecture11-neural-network-systems"
+                    },
+                    {
+                      "type": "practice",
+                      "concept": "Activation Function",
+                      "concept_id": "concept:activation-function",
+                      "minutes": 28,
+                      "resource_id": "technical.aiml.knowledge-basemachin.week12-neural-networks-lab-1-1",
+                      "title": "week12-neural-networks-lab-1-1"
+                    },
+                    {
+                      "type": "quiz",
+                      "concept": "Random Variable",
+                      "concept_id": "concept:random-variable",
+                      "minutes": 5,
+                      "resource_id": "",
+                      "title": ""
+                    },
+                    {
+                      "type": "quiz",
+                      "concept": "Clustering",
+                      "concept_id": "concept:clustering",
+                      "minutes": 5,
+                      "resource_id": "",
+                      "title": ""
+                    }
+                  ]
+                },
+                {
+                  "day": 6,
+                  "minutes": 54,
+                  "activities": [
+                    {
+                      "type": "read",
+                      "concept": "Regularization",
+                      "concept_id": "concept:regularization",
+                      "minutes": 21,
+                      "resource_id": "technical.aiml.knowledge-basemachin.lecture9-svm",
+                      "title": "lecture9-svm"
+                    },
+                    {
+                      "type": "practice",
+                      "concept": "Regularization",
+                      "concept_id": "concept:regularization",
+                      "minutes": 28,
+                      "resource_id": "technical.aiml.knowledge-basemachin.svm-script-1",
+                      "title": "svm-script-1"
+                    },
+                    {
+                      "type": "quiz",
+                      "concept": "Structure Sentence",
+                      "concept_id": "concept:structure-sentence",
+                      "minutes": 5,
+                      "resource_id": "",
+                      "title": ""
+                    }
+                  ]
+                },
+                {
+                  "day": 7,
+                  "minutes": 59,
+                  "activities": [
+                    {
+                      "type": "read",
+                      "concept": "Regression Analysis",
+                      "concept_id": "concept:regression-analysis",
+                      "minutes": 21,
+                      "resource_id": "technical.aiml.knowledge-basemachin.lecture3-introduction-to-ml",
+                      "title": "lecture3-introduction-to-ml"
+                    },
+                    {
+                      "type": "practice",
+                      "concept": "Regression Analysis",
+                      "concept_id": "concept:regression-analysis",
+                      "minutes": 28,
+                      "resource_id": "technical.aiml.knowledge-basemachin.knn",
+                      "title": "knn"
+                    },
+                    {
+                      "type": "revision",
+                      "concept": "Optimizer",
+                      "concept_id": "concept:optimizer",
+                      "minutes": 10,
+                      "resource_id": "",
+                      "title": ""
+                    }
+                  ]
+                },
+                {
+                  "day": 8,
+                  "minutes": 51,
+                  "activities": [
+                    {
+                      "type": "read",
+                      "concept": "Probability Distribution",
+                      "concept_id": "concept:probability-distribution",
+                      "minutes": 20,
+                      "resource_id": "technical.aiml.knowledge-basemachin.lecture4-data-data-manipulation",
+                      "title": "lecture4-data-data-manipulation"
+                    },
+                    {
+                      "type": "read",
+                      "concept": "Random Variable",
+                      "concept_id": "concept:random-variable",
+                      "minutes": 21,
+                      "resource_id": "technical.applied-stats.final-revision-all-r.continuous-distributions-revision-notes-s-ii-1",
+                      "title": "continuous-distributions-revision-notes-s-ii-1"
+                    },
+                    {
+                      "type": "revision",
+                      "concept": "Deep Learning",
+                      "concept_id": "concept:deep-learning",
+                      "minutes": 10,
+                      "resource_id": "",
+                      "title": ""
+                    }
+                  ]
+                },
+                {
+                  "day": 9,
+                  "minutes": 52,
+                  "activities": [
+                    {
+                      "type": "read",
+                      "concept": "Clustering",
+                      "concept_id": "concept:clustering",
+                      "minutes": 21,
+                      "resource_id": "technical.aiml.knowledge-basemachin.lecture10-kmeans",
+                      "title": "lecture10-kmeans"
+                    },
+                    {
+                      "type": "read",
+                      "concept": "Structure Sentence",
+                      "concept_id": "concept:structure-sentence",
+                      "minutes": 21,
+                      "resource_id": "nontechnical.eng.general.session-10-open-a-meeting-updated-2",
+                      "title": "session-10-open-a-meeting-updated-2"
+                    },
+                    {
+                      "type": "revision",
+                      "concept": "Engineering Mathematics",
+                      "concept_id": "concept:engineering-mathematics",
+                      "minutes": 10,
+                      "resource_id": "",
+                      "title": ""
+                    }
+                  ]
+                },
+                {
+                  "day": 10,
+                  "minutes": 60,
+                  "activities": [
+                    {
+                      "type": "revision",
+                      "concept": "Machine Learning",
+                      "concept_id": "concept:machine-learning",
+                      "minutes": 10,
+                      "resource_id": "",
+                      "title": ""
+                    },
+                    {
+                      "type": "revision",
+                      "concept": "AI Agent",
+                      "concept_id": "concept:ai-agent",
+                      "minutes": 10,
+                      "resource_id": "",
+                      "title": ""
+                    },
+                    {
+                      "type": "revision",
+                      "concept": "Activation Function",
+                      "concept_id": "concept:activation-function",
+                      "minutes": 10,
+                      "resource_id": "",
+                      "title": ""
+                    },
+                    {
+                      "type": "revision",
+                      "concept": "Regularization",
+                      "concept_id": "concept:regularization",
+                      "minutes": 10,
+                      "resource_id": "",
+                      "title": ""
+                    },
+                    {
+                      "type": "revision",
+                      "concept": "Regression Analysis",
+                      "concept_id": "concept:regression-analysis",
+                      "minutes": 10,
+                      "resource_id": "",
+                      "title": ""
+                    },
+                    {
+                      "type": "revision",
+                      "concept": "Random Variable",
+                      "concept_id": "concept:random-variable",
+                      "minutes": 10,
+                      "resource_id": "",
+                      "title": ""
+                    }
+                  ]
+                },
+                {
+                  "day": 11,
+                  "minutes": 20,
+                  "activities": [
+                    {
+                      "type": "revision",
+                      "concept": "Clustering",
+                      "concept_id": "concept:clustering",
+                      "minutes": 10,
+                      "resource_id": "",
+                      "title": ""
+                    },
+                    {
+                      "type": "revision",
+                      "concept": "Structure Sentence",
+                      "concept_id": "concept:structure-sentence",
+                      "minutes": 10,
+                      "resource_id": "",
+                      "title": ""
+                    }
+                  ]
+                }
+              ],
+              "concepts": [
+                {
+                  "concept": "Optimizer",
+                  "mastery": 0.3,
+                  "week": 1
+                },
+                {
+                  "concept": "Deep Learning",
+                  "mastery": 0.3,
+                  "week": 1
+                },
+                {
+                  "concept": "Engineering Mathematics",
+                  "mastery": 0.3,
+                  "week": 1
+                },
+                {
+                  "concept": "Machine Learning",
+                  "mastery": 0.3,
+                  "week": 1
+                },
+                {
+                  "concept": "AI Agent",
+                  "mastery": 0.3,
+                  "week": 1
+                },
+                {
+                  "concept": "Activation Function",
+                  "mastery": 0.3,
+                  "week": 2
+                },
+                {
+                  "concept": "Regularization",
+                  "mastery": 0.3,
+                  "week": 2
+                },
+                {
+                  "concept": "Regression Analysis",
+                  "mastery": 0.3,
+                  "week": 2
+                },
+                {
+                  "concept": "Probability Distribution",
+                  "mastery": 0.422,
+                  "week": 2
+                },
+                {
+                  "concept": "Random Variable",
+                  "mastery": 0.3,
+                  "week": 4
+                },
+                {
+                  "concept": "Clustering",
+                  "mastery": 0.3,
+                  "week": 6
+                },
+                {
+                  "concept": "Structure Sentence",
+                  "mastery": 0.3,
+                  "week": 99
+                }
+              ],
+              "unscheduled": [],
+              "total_minutes": 589,
+              "stats": {
+                "n_days_used": 11,
+                "deadline_days": 14,
+                "minutes_per_day": 60,
+                "total_minutes": 589,
+                "n_activities": 41,
+                "by_activity": {
+                  "read": 12,
+                  "quiz": 12,
+                  "practice": 6,
+                  "revision": 11
+                },
+                "n_concepts": 12,
+                "n_weak": 11,
+                "weak_minutes_share": 0.958,
+                "n_unscheduled": 0,
+                "fits_deadline": true,
+                "max_day_minutes": 60
+              }
+            },
+            "n_days": 11,
+            "total_minutes": 589
+          },
+          "citations": [],
+          "tools_used": [
+            "plan"
+          ]
+        }
+      ],
+      "correct": true,
+      "mastery_after": 0.4225
+    }
+  },
+  "shared_services": {
+    "retrieval_paths": 1,
+    "note": "Tutor/Quiz/Evaluator/Research all retrieve via one GraphRAGService."
+  }
+}

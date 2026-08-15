@@ -1,0 +1,435 @@
+{
+  "source_resource": "technical.applied-dl.course-project.course-project-description",
+  "n_words": 600,
+  "duration_s": 240.0,
+  "n_cues": 67,
+  "n_segments": 4,
+  "n_children": 6,
+  "timestamp_coverage": 1.0,
+  "retrieval": {
+    "query": "breaches, or non-standard liabilities in corporate",
+    "returned_timestamp": 0.0,
+    "clock": "0:00"
+  },
+  "citation": {
+    "cid": "C1",
+    "source_type": "video",
+    "locator": "0:00",
+    "link": "file:///C:/Windows/Temp/ala_video_lvosacyn/raw/video/lectures/vid/sample-lecture-real-text-timed-transcript.vtt#t=0",
+    "resolvable": true
+  },
+  "timings_ms": {
+    "transcribe": 13.2,
+    "loader": 67.1,
+    "chunk": 7.6,
+    "embed": 75.4,
+    "qdrant": 184.6,
+    "bm25": 5.7,
+    "graph": 62.2
+  },
+  "total_ms": 417.4,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.6,
+      "clock": "0:00",
+      "words": 9
+    },
+    {
+      "start": 3.6,
+      "end": 7.2,
+      "clock": "0:03",
+      "words": 9
+    },
+    {
+      "start": 7.2,
+      "end": 10.8,
+      "clock": "0:07",
+      "words": 9
+    },
+    {
+      "start": 10.8,
+      "end": 14.4,
+      "clock": "0:10",
+      "words": 9
+    },
+    {
+      "start": 14.4,
+      "end": 18.0,
+      "clock": "0:14",
+      "words": 9
+    },
+    {
+      "start": 18.0,
+      "end": 21.6,
+      "clock": "0:18",
+      "words": 9
+    },
+    {
+      "start": 21.6,
+      "end": 25.2,
+      "clock": "0:21",
+      "words": 9
+    },
+    {
+      "start": 25.2,
+      "end": 28.8,
+      "clock": "0:25",
+      "words": 9
+    },
+    {
+      "start": 28.8,
+      "end": 32.4,
+      "clock": "0:28",
+      "words": 9
+    },
+    {
+      "start": 32.4,
+      "end": 36.0,
+      "clock": "0:32",
+      "words": 9
+    },
+    {
+      "start": 36.0,
+      "end": 39.6,
+      "clock": "0:36",
+      "words": 9
+    },
+    {
+      "start": 39.6,
+      "end": 43.2,
+      "clock": "0:39",
+      "words": 9
+    },
+    {
+      "start": 43.2,
+      "end": 46.8,
+      "clock": "0:43",
+      "words": 9
+    },
+    {
+      "start": 46.8,
+      "end": 50.4,
+      "clock": "0:46",
+      "words": 9
+    },
+    {
+      "start": 50.4,
+      "end": 54.0,
+      "clock": "0:50",
+      "words": 9
+    },
+    {
+      "start": 54.0,
+      "end": 57.6,
+      "clock": "0:54",
+      "words": 9
+    },
+    {
+      "start": 57.6,
+      "end": 61.2,
+      "clock": "0:57",
+      "words": 9
+    },
+    {
+      "start": 61.2,
+      "end": 64.8,
+      "clock": "1:01",
+      "words": 9
+    },
+    {
+      "start": 64.8,
+      "end": 68.4,
+      "clock": "1:04",
+      "words": 9
+    },
+    {
+      "start": 68.4,
+      "end": 72.0,
+      "clock": "1:08",
+      "words": 9
+    },
+    {
+      "start": 72.0,
+      "end": 75.6,
+      "clock": "1:12",
+      "words": 9
+    },
+    {
+      "start": 75.6,
+      "end": 79.2,
+      "clock": "1:15",
+      "words": 9
+    },
+    {
+      "start": 79.2,
+      "end": 82.8,
+      "clock": "1:19",
+      "words": 9
+    },
+    {
+      "start": 82.8,
+      "end": 86.4,
+      "clock": "1:22",
+      "words": 9
+    },
+    {
+      "start": 86.4,
+      "end": 90.0,
+      "clock": "1:26",
+      "words": 9
+    },
+    {
+      "start": 90.0,
+      "end": 93.6,
+      "clock": "1:30",
+      "words": 9
+    },
+    {
+      "start": 93.6,
+      "end": 97.2,
+      "clock": "1:33",
+      "words": 9
+    },
+    {
+      "start": 97.2,
+      "end": 100.8,
+      "clock": "1:37",
+      "words": 9
+    },
+    {
+      "start": 100.8,
+      "end": 104.4,
+      "clock": "1:40",
+      "words": 9
+    },
+    {
+      "start": 104.4,
+      "end": 108.0,
+      "clock": "1:44",
+      "words": 9
+    },
+    {
+      "start": 108.0,
+      "end": 111.6,
+      "clock": "1:48",
+      "words": 9
+    },
+    {
+      "start": 111.6,
+      "end": 115.2,
+      "clock": "1:51",
+      "words": 9
+    },
+    {
+      "start": 115.2,
+      "end": 118.8,
+      "clock": "1:55",
+      "words": 9
+    },
+    {
+      "start": 118.8,
+      "end": 122.4,
+      "clock": "1:58",
+      "words": 9
+    },
+    {
+      "start": 122.4,
+      "end": 126.0,
+      "clock": "2:02",
+      "words": 9
+    },
+    {
+      "start": 126.0,
+      "end": 129.6,
+      "clock": "2:06",
+      "words": 9
+    },
+    {
+      "start": 129.6,
+      "end": 133.2,
+      "clock": "2:09",
+      "words": 9
+    },
+    {
+      "start": 133.2,
+      "end": 136.8,
+      "clock": "2:13",
+      "words": 9
+    },
+    {
+      "start": 136.8,
+      "end": 140.4,
+      "clock": "2:16",
+      "words": 9
+    },
+    {
+      "start": 140.4,
+      "end": 144.0,
+      "clock": "2:20",
+      "words": 9
+    },
+    {
+      "start": 144.0,
+      "end": 147.6,
+      "clock": "2:24",
+      "words": 9
+    },
+    {
+      "start": 147.6,
+      "end": 151.2,
+      "clock": "2:27",
+      "words": 9
+    },
+    {
+      "start": 151.2,
+      "end": 154.8,
+      "clock": "2:31",
+      "words": 9
+    },
+    {
+      "start": 154.8,
+      "end": 158.4,
+      "clock": "2:34",
+      "words": 9
+    },
+    {
+      "start": 158.4,
+      "end": 162.0,
+      "clock": "2:38",
+      "words": 9
+    },
+    {
+      "start": 162.0,
+      "end": 165.6,
+      "clock": "2:42",
+      "words": 9
+    },
+    {
+      "start": 165.6,
+      "end": 169.2,
+      "clock": "2:45",
+      "words": 9
+    },
+    {
+      "start": 169.2,
+      "end": 172.8,
+      "clock": "2:49",
+      "words": 9
+    },
+    {
+      "start": 172.8,
+      "end": 176.4,
+      "clock": "2:52",
+      "words": 9
+    },
+    {
+      "start": 176.4,
+      "end": 180.0,
+      "clock": "2:56",
+      "words": 9
+    },
+    {
+      "start": 180.0,
+      "end": 183.6,
+      "clock": "3:00",
+      "words": 9
+    },
+    {
+      "start": 183.6,
+      "end": 187.2,
+      "clock": "3:03",
+      "words": 9
+    },
+    {
+      "start": 187.2,
+      "end": 190.8,
+      "clock": "3:07",
+      "words": 9
+    },
+    {
+      "start": 190.8,
+      "end": 194.4,
+      "clock": "3:10",
+      "words": 9
+    },
+    {
+      "start": 194.4,
+      "end": 198.0,
+      "clock": "3:14",
+      "words": 9
+    },
+    {
+      "start": 198.0,
+      "end": 201.6,
+      "clock": "3:18",
+      "words": 9
+    },
+    {
+      "start": 201.6,
+      "end": 205.2,
+      "clock": "3:21",
+      "words": 9
+    },
+    {
+      "start": 205.2,
+      "end": 208.8,
+      "clock": "3:25",
+      "words": 9
+    },
+    {
+      "start": 208.8,
+      "end": 212.4,
+      "clock": "3:28",
+      "words": 9
+    },
+    {
+      "start": 212.4,
+      "end": 216.0,
+      "clock": "3:32",
+      "words": 9
+    },
+    {
+      "start": 216.0,
+      "end": 219.6,
+      "clock": "3:36",
+      "words": 9
+    },
+    {
+      "start": 219.6,
+      "end": 223.2,
+      "clock": "3:39",
+      "words": 9
+    },
+    {
+      "start": 223.2,
+      "end": 226.8,
+      "clock": "3:43",
+      "words": 9
+    },
+    {
+      "start": 226.8,
+      "end": 230.4,
+      "clock": "3:46",
+      "words": 9
+    },
+    {
+      "start": 230.4,
+      "end": 234.0,
+      "clock": "3:50",
+      "words": 9
+    },
+    {
+      "start": 234.0,
+      "end": 237.6,
+      "clock": "3:54",
+      "words": 9
+    },
+    {
+      "start": 237.6,
+      "end": 240.0,
+      "clock": "3:57",
+      "words": 6
+    }
+  ]
+}

@@ -1,0 +1,895 @@
+{
+  "n_queries": 10,
+  "total_citations": 230,
+  "by_source_type": {
+    "pdf": 70,
+    "notebook": 10,
+    "concept": 150
+  },
+  "by_kind": {
+    "chunk": 80,
+    "concept": 150
+  },
+  "resolvable_rate": 1.0,
+  "locator_coverage": 0.875,
+  "mean_confidence": 0.8941,
+  "per_query": [
+    {
+      "query": "what is a convolutional neural network",
+      "n_citations": 23,
+      "by_kind": {
+        "chunk": 8,
+        "concept": 15
+      },
+      "by_source_type": {
+        "pdf": 6,
+        "notebook": 2,
+        "concept": 15
+      },
+      "n_sources": 5,
+      "resolvable_rate": 1.0,
+      "locator_coverage": 0.75,
+      "web_citations": 0,
+      "mean_confidence": 0.8995
+    },
+    {
+      "query": "explain gradient descent",
+      "n_citations": 23,
+      "by_kind": {
+        "chunk": 8,
+        "concept": 15
+      },
+      "by_source_type": {
+        "notebook": 4,
+        "pdf": 4,
+        "concept": 15
+      },
+      "n_sources": 4,
+      "resolvable_rate": 1.0,
+      "locator_coverage": 0.5,
+      "web_citations": 0,
+      "mean_confidence": 0.9038
+    },
+    {
+      "query": "what is a foreign key in a relational database",
+      "n_citations": 23,
+      "by_kind": {
+        "chunk": 8,
+        "concept": 15
+      },
+      "by_source_type": {
+        "pdf": 8,
+        "concept": 15
+      },
+      "n_sources": 1,
+      "resolvable_rate": 1.0,
+      "locator_coverage": 1.0,
+      "web_citations": 0,
+      "mean_confidence": 0.8788
+    },
+    {
+      "query": "how does k-means clustering work",
+      "n_citations": 23,
+      "by_kind": {
+        "chunk": 8,
+        "concept": 15
+      },
+      "by_source_type": {
+        "pdf": 8,
+        "concept": 15
+      },
+      "n_sources": 3,
+      "resolvable_rate": 1.0,
+      "locator_coverage": 1.0,
+      "web_citations": 0,
+      "mean_confidence": 0.9077
+    },
+    {
+      "query": "what is a probability distribution",
+      "n_citations": 23,
+      "by_kind": {
+        "chunk": 8,
+        "concept": 15
+      },
+      "by_source_type": {
+        "pdf": 8,
+        "concept": 15
+      },
+      "n_sources": 2,
+      "resolvable_rate": 1.0,
+      "locator_coverage": 1.0,
+      "web_citations": 0,
+      "mean_confidence": 0.9024
+    },
+    {
+      "query": "explain overfitting and regularization",
+      "n_citations": 23,
+      "by_kind": {
+        "chunk": 8,
+        "concept": 15
+      },
+      "by_source_type": {
+        "pdf": 6,
+        "notebook": 2,
+        "concept": 15
+      },
+      "n_sources": 4,
+      "resolvable_rate": 1.0,
+      "locator_coverage": 0.75,
+      "web_citations": 0,
+      "mean_confidence": 0.8844
+    },
+    {
+      "query": "what is a random forest",
+      "n_citations": 23,
+      "by_kind": {
+        "chunk": 8,
+        "concept": 15
+      },
+      "by_source_type": {
+        "pdf": 7,
+        "notebook": 1,
+        "concept": 15
+      },
+      "n_sources": 4,
+      "resolvable_rate": 1.0,
+      "locator_coverage": 0.875,
+      "web_citations": 0,
+      "mean_confidence": 0.8889
+    },
+    {
+      "query": "how does backpropagation work",
+      "n_citations": 23,
+      "by_kind": {
+        "chunk": 8,
+        "concept": 15
+      },
+      "by_source_type": {
+        "pdf": 7,
+        "notebook": 1,
+        "concept": 15
+      },
+      "n_sources": 2,
+      "resolvable_rate": 1.0,
+      "locator_coverage": 0.875,
+      "web_citations": 0,
+      "mean_confidence": 0.8883
+    },
+    {
+      "query": "what is a support vector machine",
+      "n_citations": 23,
+      "by_kind": {
+        "chunk": 8,
+        "concept": 15
+      },
+      "by_source_type": {
+        "pdf": 8,
+        "concept": 15
+      },
+      "n_sources": 2,
+      "resolvable_rate": 1.0,
+      "locator_coverage": 1.0,
+      "web_citations": 0,
+      "mean_confidence": 0.8847
+    },
+    {
+      "query": "explain principal component analysis",
+      "n_citations": 23,
+      "by_kind": {
+        "chunk": 8,
+        "concept": 15
+      },
+      "by_source_type": {
+        "pdf": 8,
+        "concept": 15
+      },
+      "n_sources": 3,
+      "resolvable_rate": 1.0,
+      "locator_coverage": 1.0,
+      "web_citations": 0,
+      "mean_confidence": 0.9024
+    }
+  ],
+  "example": {
+    "query": "what is a convolutional neural network",
+    "nodes": [
+      {
+        "cid": "C1",
+        "kind": "chunk",
+        "label": "[practical-dl-lec6-1, p.1-20]",
+        "source_type": "pdf",
+        "resource_id": "technical.applied-dl.w06.practical-dl-lec6-1",
+        "title": "practical-dl-lec6-1",
+        "locator": "p.1-20",
+        "page": 1,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "technical.applied-dl.w06.practical-dl-lec6-1::c00001",
+        "concept_id": "",
+        "graph_path": [],
+        "confidence": 0.9485,
+        "link": "file:///D:/Ai%20tools/knowledge_base/raw/technical/applied-dl/w06/practical-dl-lec6-1.pdf#page=1",
+        "resolvable": true,
+        "text": "• We built our first Convolutional Neural Network (CNN). • Key Components: - Convolutional Layers (Conv2D): Use learnable filters (kernels) to detect local features like edges and textures. They leverage parameter sharing and preserve spatial information. - Pooling Layers (MaxPoo"
+      },
+      {
+        "cid": "C2",
+        "kind": "chunk",
+        "label": "[multiclass-classification-with-convolutional-neural-networks, Convolutional Neural Network Model]",
+        "source_type": "notebook",
+        "resource_id": "technical.applied-dl.w05.multiclass-classification-with-convolutional-neural-networks",
+        "title": "multiclass-classification-with-convolutional-neural-networks",
+        "locator": "",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "technical.applied-dl.w05.multiclass-classification-with-convolutional-neural-networks::c00027",
+        "concept_id": "",
+        "graph_path": [],
+        "confidence": 0.8773,
+        "link": "file:///D:/Ai%20tools/knowledge_base/raw/technical/applied-dl/w05/multiclass-classification-with-convolutional-neural-networks.ipynb",
+        "resolvable": true,
+        "text": "Convolutional Neural Network Model"
+      },
+      {
+        "cid": "C3",
+        "kind": "chunk",
+        "label": "[practical-dl-lec6-1, p.1-20]",
+        "source_type": "pdf",
+        "resource_id": "technical.applied-dl.w06.practical-dl-lec6-1",
+        "title": "practical-dl-lec6-1",
+        "locator": "p.1-20",
+        "page": 1,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "technical.applied-dl.w06.practical-dl-lec6-1::c00000",
+        "concept_id": "",
+        "graph_path": [],
+        "confidence": 0.8187,
+        "link": "file:///D:/Ai%20tools/knowledge_base/raw/technical/applied-dl/w06/practical-dl-lec6-1.pdf#page=1",
+        "resolvable": true,
+        "text": "Week 6 Deep Learning for Images: Convolutional Neural Networks (CNNs) (Part 2) Board of Instructors MTC Applied Deep Learning What We'll Cover Today • Recap: - The Building Blocks of a CNN. • Standard computer vision problems: - Object Recognition vs Object Classification vs Obje"
+      },
+      {
+        "cid": "C4",
+        "kind": "chunk",
+        "label": "[practical-dl-lab5, p.1-5]",
+        "source_type": "pdf",
+        "resource_id": "technical.applied-dl.w05.practical-dl-lab5",
+        "title": "practical-dl-lab5",
+        "locator": "p.1-5",
+        "page": 1,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "technical.applied-dl.w05.practical-dl-lab5::c00000",
+        "concept_id": "",
+        "graph_path": [],
+        "confidence": 0.7527,
+        "link": "file:///D:/Ai%20tools/knowledge_base/raw/technical/applied-dl/w05/practical-dl-lab5.pdf#page=1",
+        "resolvable": true,
+        "text": "Lab 5 Building Your First Convolutional Neural Network (CNN) Instructor: [Instructor's Name] Date: [Date] Applied Deep Learning Today's Lab Agenda 1. Lab Objectives: - Understand the goals for this lab. 2. The Task: - Define the image classification problem and the dataset. 3. Th"
+      },
+      {
+        "cid": "C5",
+        "kind": "chunk",
+        "label": "[practical-dl-lab5, p.1-5]",
+        "source_type": "pdf",
+        "resource_id": "technical.applied-dl.w05.practical-dl-lab5",
+        "title": "practical-dl-lab5",
+        "locator": "p.1-5",
+        "page": 1,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "technical.applied-dl.w05.practical-dl-lab5::c00001",
+        "concept_id": "",
+        "graph_path": [],
+        "confidence": 0.6834,
+        "link": "file:///D:/Ai%20tools/knowledge_base/raw/technical/applied-dl/w05/practical-dl-lab5.pdf#page=1",
+        "resolvable": true,
+        "text": "• Goal: To build, train, and evaluate a Convolutional Neural Network (CNN) for an image classification task from scratch. • Key Tasks: - Load and prepare the Fashion-MNIST image dataset. - Implement a complete CNN architecture in Keras using Conv2D, MaxPooling2D, Flatten, and Den"
+      },
+      {
+        "cid": "C6",
+        "kind": "chunk",
+        "label": "[practical-dl-lec5-2, p.33-35]",
+        "source_type": "pdf",
+        "resource_id": "technical.applied-dl.w05.practical-dl-lec5-2",
+        "title": "practical-dl-lec5-2",
+        "locator": "p.33-35",
+        "page": 33,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "technical.applied-dl.w05.practical-dl-lec5-2::c00013",
+        "concept_id": "",
+        "graph_path": [],
+        "confidence": 0.6187,
+        "link": "file:///D:/Ai%20tools/knowledge_base/raw/technical/applied-dl/w05/practical-dl-lec5-2.pdf#page=33",
+        "resolvable": true,
+        "text": "This presentation uses a free template provided by FPPT.com www.free-power-point-templates.com a) Consider an input image of shape 500×500×3. You flatten this image and use a fully connected layer with 100 hidden units. i. What is the shape of the weight matrix of this layer? ii."
+      },
+      {
+        "cid": "C7",
+        "kind": "chunk",
+        "label": "[multiclass-classification-with-convolutional-neural-networks]",
+        "source_type": "notebook",
+        "resource_id": "technical.applied-dl.w05.multiclass-classification-with-convolutional-neural-networks",
+        "title": "multiclass-classification-with-convolutional-neural-networks",
+        "locator": "",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "technical.applied-dl.w05.multiclass-classification-with-convolutional-neural-networks::c00002",
+        "concept_id": "",
+        "graph_path": [],
+        "confidence": 0.5616,
+        "link": "file:///D:/Ai%20tools/knowledge_base/raw/technical/applied-dl/w05/multiclass-classification-with-convolutional-neural-networks.ipynb",
+        "resolvable": true,
+        "text": "The purpose of this notebook is to give a practical example (with a dataset taken from the real world) of a multiclass classification problem solved by means of a Convolutional Neural Network (CNN) architecture. It may be instructive to compare the results of this notebook with t"
+      },
+      {
+        "cid": "C8",
+        "kind": "chunk",
+        "label": "[practical-dl-lab4, p.19]",
+        "source_type": "pdf",
+        "resource_id": "technical.applied-dl.w04.practical-dl-lab4",
+        "title": "practical-dl-lab4",
+        "locator": "p.19",
+        "page": 19,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "technical.applied-dl.w04.practical-dl-lab4::c00018",
+        "concept_id": "",
+        "graph_path": [],
+        "confidence": 0.4989,
+        "link": "file:///D:/Ai%20tools/knowledge_base/raw/technical/applied-dl/w04/practical-dl-lab4.pdf#page=19",
+        "resolvable": true,
+        "text": "What's Next?\n• We have now covered the complete lifecycle of building, training, regularizing, optimizing, and tuning feed-forward networks.\n• Next Week's Topic: We will advance to specialized architectures designed for specific types of data, beginning with Convolutional Neural "
+      },
+      {
+        "cid": "K1",
+        "kind": "concept",
+        "label": "Convolutional Neural Network",
+        "source_type": "concept",
+        "resource_id": "",
+        "title": "Convolutional Neural Network",
+        "locator": "seed",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "",
+        "concept_id": "concept:cnn",
+        "graph_path": [
+          "Convolutional Neural Network"
+        ],
+        "confidence": 1.0,
+        "link": "concept:cnn",
+        "resolvable": true,
+        "text": "Convolutional Neural Network  (sources: technical.applied-dl.course-project.course-project-description, technical.applied-dl.w04.practical-dl-lab4, technical.applied-dl.w04.practical-dl-lec4-final)"
+      },
+      {
+        "cid": "K2",
+        "kind": "concept",
+        "label": "Feature Engineering",
+        "source_type": "concept",
+        "resource_id": "",
+        "title": "Feature Engineering",
+        "locator": "seed",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "",
+        "concept_id": "concept:feature-engineering",
+        "graph_path": [
+          "Feature Engineering"
+        ],
+        "confidence": 1.0,
+        "link": "concept:feature-engineering",
+        "resolvable": true,
+        "text": "Feature Engineering  (sources: technical.aiml.knowledge-basemachin.lecture10-kmeans, technical.aiml.knowledge-basemachin.lecture3-introduction-to-ml, technical.aiml.knowledge-basemachin.week03)"
+      },
+      {
+        "cid": "K3",
+        "kind": "concept",
+        "label": "Overfitting",
+        "source_type": "concept",
+        "resource_id": "",
+        "title": "Overfitting",
+        "locator": "seed",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "",
+        "concept_id": "concept:overfitting",
+        "graph_path": [
+          "Overfitting"
+        ],
+        "confidence": 1.0,
+        "link": "concept:overfitting",
+        "resolvable": true,
+        "text": "Overfitting  (sources: technical.agentic-ai.w02.prompt-engineering-week2, technical.aiml.knowledge-basemachin.decisiontree, technical.aiml.knowledge-basemachin.lecture7-linear-regression)"
+      },
+      {
+        "cid": "K4",
+        "kind": "concept",
+        "label": "Regularization",
+        "source_type": "concept",
+        "resource_id": "",
+        "title": "Regularization",
+        "locator": "seed",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "",
+        "concept_id": "concept:regularization",
+        "graph_path": [
+          "Regularization"
+        ],
+        "confidence": 1.0,
+        "link": "concept:regularization",
+        "resolvable": true,
+        "text": "Regularization  (sources: technical.aiml.knowledge-basemachin.lecture9-svm, technical.aiml.knowledge-basemachin.svm-script-1, technical.aiml.knowledge-basemachin.week12-neural-networks-lab-1-1)"
+      },
+      {
+        "cid": "K5",
+        "kind": "concept",
+        "label": "Deep Learning",
+        "source_type": "concept",
+        "resource_id": "",
+        "title": "Deep Learning",
+        "locator": "seed",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "",
+        "concept_id": "concept:deep-learning",
+        "graph_path": [
+          "Deep Learning"
+        ],
+        "confidence": 1.0,
+        "link": "concept:deep-learning",
+        "resolvable": true,
+        "text": "Deep Learning  (sources: technical.agentic-ai.w01.introduction-to-agentic-ai-week1, technical.agentic-ai.w04.aigenerative-ai-week4, technical.aiml.knowledge-basemachin.lecture3-introduction-to-ml)"
+      },
+      {
+        "cid": "K6",
+        "kind": "concept",
+        "label": "Neural Network",
+        "source_type": "concept",
+        "resource_id": "",
+        "title": "Neural Network",
+        "locator": "seed",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "",
+        "concept_id": "concept:neural-network",
+        "graph_path": [
+          "Neural Network"
+        ],
+        "confidence": 1.0,
+        "link": "concept:neural-network",
+        "resolvable": true,
+        "text": "Neural Network  (sources: technical.agentic-ai.w01.introduction-to-agentic-ai-week1, technical.aiml.knowledge-basemachin.lecture1, technical.aiml.knowledge-basemachin.lecture11-neural-network-systems)"
+      },
+      {
+        "cid": "K7",
+        "kind": "concept",
+        "label": "Activation Function",
+        "source_type": "concept",
+        "resource_id": "",
+        "title": "Activation Function",
+        "locator": "seed",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "",
+        "concept_id": "concept:activation-function",
+        "graph_path": [
+          "Activation Function"
+        ],
+        "confidence": 1.0,
+        "link": "concept:activation-function",
+        "resolvable": true,
+        "text": "Activation Function  (sources: technical.aiml.knowledge-basemachin.lecture11-neural-network-systems, technical.aiml.knowledge-basemachin.week12-neural-networks-lab-1-1, technical.applied-dl.w02.linear-regression-with-one-neuron)"
+      },
+      {
+        "cid": "K8",
+        "kind": "concept",
+        "label": "Transfer Learning",
+        "source_type": "concept",
+        "resource_id": "",
+        "title": "Transfer Learning",
+        "locator": "seed",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "",
+        "concept_id": "concept:transfer-learning",
+        "graph_path": [
+          "Transfer Learning"
+        ],
+        "confidence": 1.0,
+        "link": "concept:transfer-learning",
+        "resolvable": true,
+        "text": "Transfer Learning  (sources: technical.applied-dl.course-project.course-project-description, technical.applied-dl.w05.practical-dl-lab5, technical.applied-dl.w05.practical-dl-lec5-2)"
+      },
+      {
+        "cid": "K9",
+        "kind": "concept",
+        "label": "Data Preprocessing",
+        "source_type": "concept",
+        "resource_id": "",
+        "title": "Data Preprocessing",
+        "locator": "1-hop via related_to",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "",
+        "concept_id": "concept:data-preprocessing",
+        "graph_path": [
+          "Convolutional Neural Network",
+          "Data Preprocessing"
+        ],
+        "confidence": 1.0,
+        "link": "concept:data-preprocessing",
+        "resolvable": true,
+        "text": "Convolutional Neural Network -> Data Preprocessing  (sources: technical.agentic-ai.w07.rag-lecture-week7, technical.aiml.knowledge-basemachin.lecture3-introduction-to-ml, technical.aiml.knowledge-basemachin.lecture4-data-data-manipulation)"
+      },
+      {
+        "cid": "K10",
+        "kind": "concept",
+        "label": "Machine Learning",
+        "source_type": "concept",
+        "resource_id": "",
+        "title": "Machine Learning",
+        "locator": "1-hop via related_to",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "",
+        "concept_id": "concept:machine-learning",
+        "graph_path": [
+          "Convolutional Neural Network",
+          "Machine Learning"
+        ],
+        "confidence": 1.0,
+        "link": "concept:machine-learning",
+        "resolvable": true,
+        "text": "Convolutional Neural Network -> Machine Learning  (sources: technical.agentic-ai.w01.introduction-to-agentic-ai-week1, technical.agentic-ai.w02.prompt-engineering-week2, technical.agentic-ai.w03.prompt-engineering-week3)"
+      },
+      {
+        "cid": "K11",
+        "kind": "concept",
+        "label": "Loss Function",
+        "source_type": "concept",
+        "resource_id": "",
+        "title": "Loss Function",
+        "locator": "1-hop via related_to",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "",
+        "concept_id": "concept:loss-function",
+        "graph_path": [
+          "Convolutional Neural Network",
+          "Loss Function"
+        ],
+        "confidence": 1.0,
+        "link": "concept:loss-function",
+        "resolvable": true,
+        "text": "Convolutional Neural Network -> Loss Function  (sources: technical.applied-dl.w01.practical-dl-lab1-1, technical.applied-dl.w01.practical-dl-lec1-1, technical.applied-dl.w02.linear-regression-with-one-neuron)"
+      },
+      {
+        "cid": "K12",
+        "kind": "concept",
+        "label": "Optimizer",
+        "source_type": "concept",
+        "resource_id": "",
+        "title": "Optimizer",
+        "locator": "1-hop via related_to",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "",
+        "concept_id": "concept:optimizer",
+        "graph_path": [
+          "Convolutional Neural Network",
+          "Optimizer"
+        ],
+        "confidence": 1.0,
+        "link": "concept:optimizer",
+        "resolvable": true,
+        "text": "Convolutional Neural Network -> Optimizer  (sources: nontechnical.eng.general.session-12-make-or-change-an-appointment-by-email-updated-2, technical.aiml.knowledge-basemachin.week12-neural-networks-lab-1-1, technical.applied-dl.course-project.course-project-description)"
+      },
+      {
+        "cid": "K13",
+        "kind": "concept",
+        "label": "Fine-Tuning",
+        "source_type": "concept",
+        "resource_id": "",
+        "title": "Fine-Tuning",
+        "locator": "1-hop via related_to",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "",
+        "concept_id": "concept:fine-tuning",
+        "graph_path": [
+          "Convolutional Neural Network",
+          "Fine-Tuning"
+        ],
+        "confidence": 1.0,
+        "link": "concept:fine-tuning",
+        "resolvable": true,
+        "text": "Convolutional Neural Network -> Fine-Tuning  (sources: technical.agentic-ai.w03.prompt-engineering-week3, technical.agentic-ai.w04.aigenerative-ai-week4, technical.agentic-ai.w07.rag-lecture-week7)"
+      },
+      {
+        "cid": "K14",
+        "kind": "concept",
+        "label": "Image Classification",
+        "source_type": "concept",
+        "resource_id": "",
+        "title": "Image Classification",
+        "locator": "1-hop via related_to",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "",
+        "concept_id": "concept:image-classification",
+        "graph_path": [
+          "Convolutional Neural Network",
+          "Image Classification"
+        ],
+        "confidence": 1.0,
+        "link": "concept:image-classification",
+        "resolvable": true,
+        "text": "Convolutional Neural Network -> Image Classification  (sources: technical.agentic-ai.w04.aigenerative-ai-week4, technical.aiml.knowledge-basemachin.week-7-naive-bayes-1, technical.applied-dl.w02.multiclass-classification-with-fully-connected-networks)"
+      },
+      {
+        "cid": "K15",
+        "kind": "concept",
+        "label": "Dense Activation",
+        "source_type": "concept",
+        "resource_id": "",
+        "title": "Dense Activation",
+        "locator": "1-hop via related_to",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "chunk_id": "",
+        "concept_id": "concept:dense-activation",
+        "graph_path": [
+          "Convolutional Neural Network",
+          "Dense Activation"
+        ],
+        "confidence": 0.9285,
+        "link": "concept:dense-activation",
+        "resolvable": true,
+        "text": "Convolutional Neural Network -> Dense Activation  (sources: technical.aiml.knowledge-basemachin.week12-neural-networks-lab-1-1, technical.applied-dl.w02.multiclass-classification-with-fully-connected-networks, technical.applied-dl.w02.practical-dl-lab2-1)"
+      }
+    ],
+    "stats": {
+      "n_citations": 23,
+      "by_kind": {
+        "chunk": 8,
+        "concept": 15
+      },
+      "by_source_type": {
+        "pdf": 6,
+        "notebook": 2,
+        "concept": 15
+      },
+      "n_sources": 5,
+      "resolvable_rate": 1.0,
+      "locator_coverage": 0.75,
+      "web_citations": 0,
+      "mean_confidence": 0.8995
+    },
+    "sources": [
+      {
+        "resource_id": "technical.applied-dl.w06.practical-dl-lec6-1",
+        "title": "practical-dl-lec6-1",
+        "source_type": "pdf",
+        "n_citations": 2,
+        "link": "file:///D:/Ai%20tools/knowledge_base/raw/technical/applied-dl/w06/practical-dl-lec6-1.pdf#page=1",
+        "citations": [
+          "C1",
+          "C3"
+        ]
+      },
+      {
+        "resource_id": "technical.applied-dl.w05.multiclass-classification-with-convolutional-neural-networks",
+        "title": "multiclass-classification-with-convolutional-neural-networks",
+        "source_type": "notebook",
+        "n_citations": 2,
+        "link": "file:///D:/Ai%20tools/knowledge_base/raw/technical/applied-dl/w05/multiclass-classification-with-convolutional-neural-networks.ipynb",
+        "citations": [
+          "C2",
+          "C7"
+        ]
+      },
+      {
+        "resource_id": "technical.applied-dl.w05.practical-dl-lab5",
+        "title": "practical-dl-lab5",
+        "source_type": "pdf",
+        "n_citations": 2,
+        "link": "file:///D:/Ai%20tools/knowledge_base/raw/technical/applied-dl/w05/practical-dl-lab5.pdf#page=1",
+        "citations": [
+          "C4",
+          "C5"
+        ]
+      },
+      {
+        "resource_id": "technical.applied-dl.w05.practical-dl-lec5-2",
+        "title": "practical-dl-lec5-2",
+        "source_type": "pdf",
+        "n_citations": 1,
+        "link": "file:///D:/Ai%20tools/knowledge_base/raw/technical/applied-dl/w05/practical-dl-lec5-2.pdf#page=33",
+        "citations": [
+          "C6"
+        ]
+      },
+      {
+        "resource_id": "technical.applied-dl.w04.practical-dl-lab4",
+        "title": "practical-dl-lab4",
+        "source_type": "pdf",
+        "n_citations": 1,
+        "link": "file:///D:/Ai%20tools/knowledge_base/raw/technical/applied-dl/w04/practical-dl-lab4.pdf#page=19",
+        "citations": [
+          "C8"
+        ]
+      },
+      {
+        "resource_id": "",
+        "title": "Convolutional Neural Network",
+        "source_type": "concept",
+        "n_citations": 1,
+        "link": "concept:cnn",
+        "citations": [
+          "K1"
+        ]
+      },
+      {
+        "resource_id": "",
+        "title": "Feature Engineering",
+        "source_type": "concept",
+        "n_citations": 1,
+        "link": "concept:feature-engineering",
+        "citations": [
+          "K2"
+        ]
+      },
+      {
+        "resource_id": "",
+        "title": "Overfitting",
+        "source_type": "concept",
+        "n_citations": 1,
+        "link": "concept:overfitting",
+        "citations": [
+          "K3"
+        ]
+      },
+      {
+        "resource_id": "",
+        "title": "Regularization",
+        "source_type": "concept",
+        "n_citations": 1,
+        "link": "concept:regularization",
+        "citations": [
+          "K4"
+        ]
+      },
+      {
+        "resource_id": "",
+        "title": "Deep Learning",
+        "source_type": "concept",
+        "n_citations": 1,
+        "link": "concept:deep-learning",
+        "citations": [
+          "K5"
+        ]
+      },
+      {
+        "resource_id": "",
+        "title": "Neural Network",
+        "source_type": "concept",
+        "n_citations": 1,
+        "link": "concept:neural-network",
+        "citations": [
+          "K6"
+        ]
+      },
+      {
+        "resource_id": "",
+        "title": "Activation Function",
+        "source_type": "concept",
+        "n_citations": 1,
+        "link": "concept:activation-function",
+        "citations": [
+          "K7"
+        ]
+      },
+      {
+        "resource_id": "",
+        "title": "Transfer Learning",
+        "source_type": "concept",
+        "n_citations": 1,
+        "link": "concept:transfer-learning",
+        "citations": [
+          "K8"
+        ]
+      },
+      {
+        "resource_id": "",
+        "title": "Data Preprocessing",
+        "source_type": "concept",
+        "n_citations": 1,
+        "link": "concept:data-preprocessing",
+        "citations": [
+          "K9"
+        ]
+      },
+      {
+        "resource_id": "",
+        "title": "Machine Learning",
+        "source_type": "concept",
+        "n_citations": 1,
+        "link": "concept:machine-learning",
+        "citations": [
+          "K10"
+        ]
+      },
+      {
+        "resource_id": "",
+        "title": "Loss Function",
+        "source_type": "concept",
+        "n_citations": 1,
+        "link": "concept:loss-function",
+        "citations": [
+          "K11"
+        ]
+      },
+      {
+        "resource_id": "",
+        "title": "Optimizer",
+        "source_type": "concept",
+        "n_citations": 1,
+        "link": "concept:optimizer",
+        "citations": [
+          "K12"
+        ]
+      },
+      {
+        "resource_id": "",
+        "title": "Fine-Tuning",
+        "source_type": "concept",
+        "n_citations": 1,
+        "link": "concept:fine-tuning",
+        "citations": [
+          "K13"
+        ]
+      },
+      {
+        "resource_id": "",
+        "title": "Image Classification",
+        "source_type": "concept",
+        "n_citations": 1,
+        "link": "concept:image-classification",
+        "citations": [
+          "K14"
+        ]
+      },
+      {
+        "resource_id": "",
+        "title": "Dense Activation",
+        "source_type": "concept",
+        "n_citations": 1,
+        "link": "concept:dense-activation",
+        "citations": [
+          "K15"
+        ]
+      }
+    ]
+  },
+  "html": "D:\\Ai tools\\reports\\stage15_citation_explorer\\example_explorer.html"
+}

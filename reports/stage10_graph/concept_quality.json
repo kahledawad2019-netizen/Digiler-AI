@@ -1,0 +1,199 @@
+{
+  "concepts_before": 247,
+  "concepts_after": 131,
+  "seed_concepts": 71,
+  "mined_concepts": 60,
+  "multiword_concepts": 122,
+  "by_domain": {
+    "mined": 60,
+    "machine-learning": 16,
+    "deep-learning": 15,
+    "agentic-ai": 11,
+    "statistics": 9,
+    "databases": 8,
+    "data-mining": 5,
+    "computer-vision": 3,
+    "data-analysis": 3,
+    "reinforcement-learning": 1
+  },
+  "most_frequent": [
+    {
+      "concept": "Probability Distribution",
+      "domain": "statistics",
+      "frequency": 427,
+      "n_resources": 67,
+      "confidence": 1.0
+    },
+    {
+      "concept": "Optimizer",
+      "domain": "deep-learning",
+      "frequency": 305,
+      "n_resources": 28,
+      "confidence": 1.0
+    },
+    {
+      "concept": "Random Variable",
+      "domain": "statistics",
+      "frequency": 255,
+      "n_resources": 25,
+      "confidence": 1.0
+    },
+    {
+      "concept": "Structure Sentence",
+      "domain": "mined",
+      "frequency": 245,
+      "n_resources": 26,
+      "confidence": 0.8764
+    },
+    {
+      "concept": "Clustering",
+      "domain": "data-mining",
+      "frequency": 237,
+      "n_resources": 12,
+      "confidence": 1.0
+    },
+    {
+      "concept": "Activation Function",
+      "domain": "deep-learning",
+      "frequency": 234,
+      "n_resources": 29,
+      "confidence": 1.0
+    },
+    {
+      "concept": "Deep Learning",
+      "domain": "deep-learning",
+      "frequency": 222,
+      "n_resources": 43,
+      "confidence": 1.0
+    },
+    {
+      "concept": "Regularization",
+      "domain": "machine-learning",
+      "frequency": 211,
+      "n_resources": 21,
+      "confidence": 1.0
+    },
+    {
+      "concept": "Engineering Mathematics",
+      "domain": "mined",
+      "frequency": 190,
+      "n_resources": 17,
+      "confidence": 0.9446
+    },
+    {
+      "concept": "Machine Learning",
+      "domain": "machine-learning",
+      "frequency": 188,
+      "n_resources": 41,
+      "confidence": 1.0
+    },
+    {
+      "concept": "AI Agent",
+      "domain": "agentic-ai",
+      "frequency": 185,
+      "n_resources": 12,
+      "confidence": 1.0
+    },
+    {
+      "concept": "Regression Analysis",
+      "domain": "statistics",
+      "frequency": 177,
+      "n_resources": 30,
+      "confidence": 1.0
+    },
+    {
+      "concept": "Confidence Interval",
+      "domain": "statistics",
+      "frequency": 173,
+      "n_resources": 6,
+      "confidence": 1.0
+    },
+    {
+      "concept": "Neural Network",
+      "domain": "deep-learning",
+      "frequency": 170,
+      "n_resources": 36,
+      "confidence": 1.0
+    },
+    {
+      "concept": "Workflow Automation",
+      "domain": "agentic-ai",
+      "frequency": 141,
+      "n_resources": 12,
+      "confidence": 1.0
+    }
+  ],
+  "largest_connected": [
+    {
+      "concept": "Probability Distribution",
+      "related_degree": 90
+    },
+    {
+      "concept": "Regression Analysis",
+      "related_degree": 81
+    },
+    {
+      "concept": "Deep Learning",
+      "related_degree": 81
+    },
+    {
+      "concept": "Machine Learning",
+      "related_degree": 79
+    },
+    {
+      "concept": "Data Preprocessing",
+      "related_degree": 79
+    },
+    {
+      "concept": "Neural Network",
+      "related_degree": 73
+    },
+    {
+      "concept": "Regularization",
+      "related_degree": 65
+    },
+    {
+      "concept": "Matplotlib Pyplot",
+      "related_degree": 63
+    },
+    {
+      "concept": "Pyplot Plt",
+      "related_degree": 63
+    },
+    {
+      "concept": "Overfitting",
+      "related_degree": 62
+    }
+  ],
+  "removed_generic_examples": [
+    "data",
+    "example",
+    "introduction",
+    "learning",
+    "model",
+    "plt",
+    "random"
+  ],
+  "added_multiword_examples": [
+    "SQL Join",
+    "Primary Key",
+    "Foreign Key",
+    "Database Normalization",
+    "Relational Model",
+    "SQL Query",
+    "Database Constraint",
+    "Entity-Relationship Model",
+    "Association Rule Mining",
+    "Pattern Mining",
+    "Exploratory Data Analysis",
+    "Data Preprocessing",
+    "Probability Distribution",
+    "Random Variable",
+    "Hypothesis Testing",
+    "Confidence Interval",
+    "Statistical Inference",
+    "Mathematical Expectation",
+    "Conditional Probability",
+    "Regression Analysis"
+  ]
+}

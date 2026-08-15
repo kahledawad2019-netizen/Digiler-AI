@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Digiler AI — professional, minimal, academic. Pure white + blue. */
+:root {
+  --background: 0 0% 100%;              /* pure white */
+  --foreground: 222 24% 16%;           /* near-black text */
+  --card: 210 33% 99%;                 /* very light gray cards */
+  --card-foreground: 222 24% 16%;
+  --muted: 210 24% 96%;                /* light gray surfaces */
+  --muted-foreground: 215 16% 46%;     /* dark gray secondary text */
+  --primary: 221 83% 53%;              /* blue */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 24% 96%;
+  --secondary-foreground: 222 24% 20%;
+  --accent: 214 100% 96%;              /* light blue (hover) */
+  --accent-foreground: 221 83% 45%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 214 24% 91%;
+  --input: 214 24% 91%;
+  --ring: 221 83% 53%;
+  --radius: 0.75rem;
+}
+
+* { border-color: hsl(var(--border)); }
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Slim, unobtrusive scrollbars (academic, minimal). */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: hsl(214 20% 86%); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(214 20% 78%); }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* Prose for rendered answers */
+.prose-answer { line-height: 1.7; font-size: 0.95rem; }
+.prose-answer p { margin: 0.5rem 0; }
+.prose-answer ul, .prose-answer ol { margin: 0.5rem 0 0.5rem 1.25rem; }
+.prose-answer code { background: hsl(var(--muted)); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.85em; }
+.prose-answer pre { background: hsl(222 24% 12%); color: hsl(0 0% 96%); padding: 0.9rem; border-radius: 8px; overflow-x: auto; }
+.prose-answer h1, .prose-answer h2, .prose-answer h3 { font-weight: 600; margin: 0.8rem 0 0.3rem; }
+
+@keyframes blink { 50% { opacity: 0.2; } }
+.typing-dot { animation: blink 1.2s infinite; }

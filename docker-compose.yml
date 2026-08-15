@@ -1,0 +1,88 @@
+# Digiler AI — full stack.  `docker compose up`  brings up the whole platform.
+# Services: postgres · redis · qdrant (server mode) · ollama · backend · frontend · nginx.
+# Open http://localhost — nginx serves the frontend and proxies /api to the backend.
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: digiler
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-digiler}
+      POSTGRES_DB: digiler
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U digiler"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--save", "60", "1"]
+    volumes: [redisdata:/data]
+    restart: unless-stopped
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    volumes: [qdrantdata:/qdrant/storage]
+    ports: ["6333:6333"]
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    volumes: [ollamadata:/root/.ollama]
+    ports: ["11434:11434"]
+    # GPU: uncomment on an NVIDIA host
+    # deploy: {resources: {reservations: {devices: [{driver: nvidia, count: all, capabilities: [gpu]}]}}}
+    restart: unless-stopped
+
+  backend:
+    build: {context: ., dockerfile: backend/Dockerfile}
+    depends_on:
+      postgres: {condition: service_healthy}
+      qdrant: {condition: service_started}
+      ollama: {condition: service_started}
+    environment:
+      DIGILER_ENV: production
+      DIGILER_DATABASE_URL: postgresql+asyncpg://digiler:${POSTGRES_PASSWORD:-digiler}@postgres:5432/digiler
+      DIGILER_REDIS_URL: redis://redis:6379/0
+      DIGILER_SECRET_KEY: ${DIGILER_SECRET_KEY:-change-me-in-production}
+      DIGILER_CORS_ORIGINS: ${DIGILER_CORS_ORIGINS:-http://localhost}
+      ALA_CONFIG: /app/config/platform.yaml
+      ALA_LLM_BASE_URL: http://ollama:11434
+      ALA_LLM_MODEL: ${ALA_LLM_MODEL:-qwen3}
+      HF_HUB_OFFLINE: "1"
+      # Web Search (Research Mode) — wikipedia works with no key; set tavily/google + key for broad web.
+      ALA_RESEARCH_PROVIDER: ${ALA_RESEARCH_PROVIDER:-wikipedia}
+      ALA_RESEARCH_API_KEY: ${ALA_RESEARCH_API_KEY:-}
+      ALA_RESEARCH_GOOGLE_CX: ${ALA_RESEARCH_GOOGLE_CX:-}
+    volumes:
+      # Built knowledge artifacts (catalog / derived / graph / bm25 / student) + uploads.
+      # Set retrieval.vector_store.location to "http://qdrant:6333" in platform.yaml for server mode.
+      - ./knowledge_base:/app/knowledge_base
+      - ./data:/app/data
+      - ./config:/app/config
+    ports: ["8000:8000"]
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_URL: http://backend:8000
+    depends_on: [backend]
+    expose: ["3000"]
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:alpine
+    depends_on: [backend, frontend]
+    volumes: [./deploy/nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro]
+    ports: ["80:80"]
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  redisdata:
+  qdrantdata:
+  ollamadata:

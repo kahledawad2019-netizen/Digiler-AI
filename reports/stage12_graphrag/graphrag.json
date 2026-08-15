@@ -1,0 +1,291 @@
+{
+  "metrics": {
+    "n_questions": 60,
+    "grounding_ratio": 1.0,
+    "citation_validity": 1.0,
+    "answer_has_citation": 1.0,
+    "context_precision": 0.6131,
+    "context_recall": 1.0,
+    "graph_coverage": 1.0,
+    "avg_concepts_in_context": 8.0,
+    "multi_hop_presence": 1.0,
+    "avg_relations_in_context": 2.0,
+    "avg_context_tokens": 330.15,
+    "mean_latency_ms": 79.7142,
+    "throughput_qps": 12.54,
+    "citation_source_types": {
+      "pdf": 107,
+      "notebook": 5,
+      "slide": 6
+    }
+  },
+  "tokens": [
+    323,
+    78,
+    340,
+    84,
+    481,
+    175,
+    522,
+    179,
+    153,
+    485,
+    157,
+    163,
+    316,
+    558,
+    334,
+    159,
+    263,
+    458,
+    517,
+    512,
+    508,
+    373,
+    171,
+    66,
+    584,
+    384,
+    339,
+    143,
+    216,
+    490,
+    430,
+    278,
+    597,
+    502,
+    641,
+    171,
+    631,
+    190,
+    159,
+    639,
+    172,
+    150,
+    362,
+    461,
+    163,
+    518,
+    174,
+    150,
+    174,
+    697,
+    128,
+    324,
+    347,
+    159,
+    141,
+    131,
+    863,
+    171,
+    271,
+    484
+  ],
+  "example": {
+    "question": "what is a convolutional neural network",
+    "answer": "Key concepts: Convolutional Neural Network [K1], Feature Engineering [K2], Overfitting [K3]. [C1] We built our first Convolutional Neural Network (CNN). [C2] Convolutional Neural Network Model. [C3] Lab 5 Building Your First Convolutional Neural Network (CNN) Instructor: [Instructor's Name] Date: [Date] Applied Deep Learning Today's Lab Agenda 1.",
+    "generator": "extractive-grounded",
+    "confidence": 0.8815,
+    "grounding": {
+      "grounding_ratio": 1.0,
+      "grounded_sentences": 4,
+      "total_sentences": 4,
+      "citations_used": [
+        "C1",
+        "C2",
+        "C3",
+        "K1",
+        "K2",
+        "K3"
+      ],
+      "invalid_citations": [],
+      "citation_valid": true,
+      "ungrounded_sentences": []
+    },
+    "reasoning_trace": [
+      "Retrieved 8 candidate passages (hybrid + graph-aware ranking).",
+      "Linked the question to 8 seed concept(s); expanded to 60 concept(s) over 1 hop(s).",
+      "Graph reached 147 resource(s) through concept edges.",
+      "Assembled a 617-token grounded context: 5 source(s) + 8 concept(s)."
+    ],
+    "stats": {
+      "latency_ms": 65.69,
+      "context_tokens": 617,
+      "prompt_chars": 4390,
+      "n_sources": 5,
+      "n_concepts": 8,
+      "n_relations": 2,
+      "graph_latency_ms": 63.08
+    },
+    "citations": [
+      {
+        "cid": "K1",
+        "kind": "concept",
+        "label": "Convolutional Neural Network",
+        "resource_id": "technical.applied-dl.course-project.course-project-description",
+        "source_type": "concept",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "confidence": 1.0
+      },
+      {
+        "cid": "K2",
+        "kind": "concept",
+        "label": "Feature Engineering",
+        "resource_id": "technical.aiml.knowledge-basemachin.lecture10-kmeans",
+        "source_type": "concept",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "confidence": 1.0
+      },
+      {
+        "cid": "K3",
+        "kind": "concept",
+        "label": "Overfitting",
+        "resource_id": "technical.agentic-ai.w02.prompt-engineering-week2",
+        "source_type": "concept",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "confidence": 1.0
+      },
+      {
+        "cid": "C1",
+        "kind": "chunk",
+        "label": "[practical-dl-lec6-1, p.1-20]",
+        "resource_id": "technical.applied-dl.w06.practical-dl-lec6-1",
+        "source_type": "pdf",
+        "page": 1,
+        "slide": null,
+        "timestamp": null,
+        "confidence": 0.9485
+      },
+      {
+        "cid": "C2",
+        "kind": "chunk",
+        "label": "[multiclass-classification-with-convolutional-neural-networks, Convolutional Neural Network Model]",
+        "resource_id": "technical.applied-dl.w05.multiclass-classification-with-convolutional-neural-networks",
+        "source_type": "notebook",
+        "page": null,
+        "slide": null,
+        "timestamp": null,
+        "confidence": 0.8773
+      },
+      {
+        "cid": "C3",
+        "kind": "chunk",
+        "label": "[practical-dl-lab5, p.1-5]",
+        "resource_id": "technical.applied-dl.w05.practical-dl-lab5",
+        "source_type": "pdf",
+        "page": 1,
+        "slide": null,
+        "timestamp": null,
+        "confidence": 0.7527
+      }
+    ],
+    "context": {
+      "sources": [
+        {
+          "cid": "C1",
+          "resource_id": "technical.applied-dl.w06.practical-dl-lec6-1",
+          "type": "pdf",
+          "confidence": 0.9485,
+          "tokens": 179
+        },
+        {
+          "cid": "C2",
+          "resource_id": "technical.applied-dl.w05.multiclass-classification-with-convolutional-neural-networks",
+          "type": "notebook",
+          "confidence": 0.8773,
+          "tokens": 5
+        },
+        {
+          "cid": "C3",
+          "resource_id": "technical.applied-dl.w05.practical-dl-lab5",
+          "type": "pdf",
+          "confidence": 0.7527,
+          "tokens": 179
+        },
+        {
+          "cid": "C4",
+          "resource_id": "technical.applied-dl.w05.practical-dl-lec5-2",
+          "type": "pdf",
+          "confidence": 0.6187,
+          "tokens": 175
+        },
+        {
+          "cid": "C5",
+          "resource_id": "technical.applied-dl.w05.multiclass-classification-with-convolutional-neural-networks",
+          "type": "notebook",
+          "confidence": 0.5616,
+          "tokens": 79
+        }
+      ],
+      "concepts": [
+        {
+          "cid": "K1",
+          "concept": "Convolutional Neural Network",
+          "hop": 0,
+          "relationship": "seed"
+        },
+        {
+          "cid": "K2",
+          "concept": "Feature Engineering",
+          "hop": 0,
+          "relationship": "seed"
+        },
+        {
+          "cid": "K3",
+          "concept": "Overfitting",
+          "hop": 0,
+          "relationship": "seed"
+        },
+        {
+          "cid": "K4",
+          "concept": "Regularization",
+          "hop": 0,
+          "relationship": "seed"
+        },
+        {
+          "cid": "K5",
+          "concept": "Deep Learning",
+          "hop": 0,
+          "relationship": "seed"
+        },
+        {
+          "cid": "K6",
+          "concept": "Neural Network",
+          "hop": 0,
+          "relationship": "seed"
+        },
+        {
+          "cid": "K7",
+          "concept": "Data Preprocessing",
+          "hop": 1,
+          "relationship": "related_to"
+        },
+        {
+          "cid": "K8",
+          "concept": "Machine Learning",
+          "hop": 1,
+          "relationship": "related_to"
+        }
+      ],
+      "relations": [
+        {
+          "source": "Convolutional Neural Network",
+          "relationship": "related_to",
+          "target": "Data Preprocessing"
+        },
+        {
+          "source": "Convolutional Neural Network",
+          "relationship": "related_to",
+          "target": "Machine Learning"
+        }
+      ],
+      "prerequisites": []
+    }
+  }
+}

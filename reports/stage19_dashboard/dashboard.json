@@ -1,0 +1,678 @@
+{
+  "student_id": "demo-learner",
+  "profile": {
+    "student_id": "demo-learner",
+    "name": "Demo Learner",
+    "level": "intermediate",
+    "preferred_language": "en",
+    "explanation_style": "example-driven",
+    "difficulty_preference": "adaptive",
+    "learning_pace": "normal",
+    "goals": [
+      "pass the final exam"
+    ],
+    "created_at": "2026-07-28T11:32:32+00:00",
+    "updated_at": "2026-07-28T11:32:32+00:00"
+  },
+  "summary": {
+    "student_id": "demo-learner",
+    "overall_mastery": 0.4234,
+    "n_tracked": 8,
+    "n_weak": 4,
+    "n_strong": 4,
+    "n_events": 39,
+    "events_by_type": {
+      "quiz": 24,
+      "reading": 4,
+      "lesson": 4,
+      "video": 4,
+      "interaction": 3
+    }
+  },
+  "mastery_distribution": {
+    "bins": [
+      "0-.2",
+      ".2-.4",
+      ".4-.6",
+      ".6-.8",
+      ".8-1"
+    ],
+    "counts": [
+      4,
+      0,
+      0,
+      4,
+      0
+    ]
+  },
+  "heatmap": [
+    {
+      "concept": "Structure Sentence",
+      "domain": "mined",
+      "mastery": 0.125
+    },
+    {
+      "concept": "Probability Distribution",
+      "domain": "statistics",
+      "mastery": 0.134
+    },
+    {
+      "concept": "Optimizer",
+      "domain": "deep-learning",
+      "mastery": 0.134
+    },
+    {
+      "concept": "Random Variable",
+      "domain": "statistics",
+      "mastery": 0.134
+    },
+    {
+      "concept": "Clustering",
+      "domain": "data-mining",
+      "mastery": 0.715
+    },
+    {
+      "concept": "Activation Function",
+      "domain": "deep-learning",
+      "mastery": 0.715
+    },
+    {
+      "concept": "Deep Learning",
+      "domain": "deep-learning",
+      "mastery": 0.715
+    },
+    {
+      "concept": "Regularization",
+      "domain": "machine-learning",
+      "mastery": 0.715
+    }
+  ],
+  "domain_mastery": [
+    {
+      "domain": "mined",
+      "mastery": 0.125,
+      "n": 1
+    },
+    {
+      "domain": "statistics",
+      "mastery": 0.134,
+      "n": 2
+    },
+    {
+      "domain": "deep-learning",
+      "mastery": 0.521,
+      "n": 3
+    },
+    {
+      "domain": "data-mining",
+      "mastery": 0.715,
+      "n": 1
+    },
+    {
+      "domain": "machine-learning",
+      "mastery": 0.715,
+      "n": 1
+    }
+  ],
+  "weak_concepts": [
+    {
+      "concept": "Structure Sentence",
+      "mastery": 0.125,
+      "attempts": 4
+    },
+    {
+      "concept": "Probability Distribution",
+      "mastery": 0.134,
+      "attempts": 5
+    },
+    {
+      "concept": "Optimizer",
+      "mastery": 0.134,
+      "attempts": 5
+    },
+    {
+      "concept": "Random Variable",
+      "mastery": 0.134,
+      "attempts": 5
+    }
+  ],
+  "strong_concepts": [
+    {
+      "concept": "Clustering",
+      "mastery": 0.715,
+      "attempts": 5
+    },
+    {
+      "concept": "Activation Function",
+      "mastery": 0.715,
+      "attempts": 5
+    },
+    {
+      "concept": "Deep Learning",
+      "mastery": 0.715,
+      "attempts": 5
+    },
+    {
+      "concept": "Regularization",
+      "mastery": 0.715,
+      "attempts": 5
+    }
+  ],
+  "timeline": [
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "reading",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "reading",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "reading",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "reading",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "lesson",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "video",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "lesson",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "video",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "lesson",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "video",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "quiz",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "lesson",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "video",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "interaction",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "interaction",
+      "n_concepts": 1
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "type": "interaction",
+      "n_concepts": 1
+    }
+  ],
+  "progress": {
+    "quiz": 24,
+    "reading": 4,
+    "lesson": 4,
+    "video": 4,
+    "interaction": 3
+  },
+  "time_spent": {
+    "by_type": {
+      "quiz": 72.0,
+      "reading": 32.0,
+      "lesson": 60.0,
+      "video": 40.0,
+      "interaction": 6.0
+    },
+    "total_minutes": 210.0
+  },
+  "completion": {
+    "concepts_seen": 8,
+    "concepts_total": 131,
+    "concept_coverage": 0.0611,
+    "resources_completed": 11,
+    "by_course": [
+      {
+        "course": "agentic-ai",
+        "completed": 2,
+        "available": 12,
+        "rate": 0.167
+      },
+      {
+        "course": "aiml",
+        "completed": 6,
+        "available": 27,
+        "rate": 0.222
+      },
+      {
+        "course": "applied-stats",
+        "completed": 1,
+        "available": 50,
+        "rate": 0.02
+      },
+      {
+        "course": "eng",
+        "completed": 2,
+        "available": 30,
+        "rate": 0.067
+      }
+    ]
+  },
+  "confidence_evolution": [
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 0.0,
+      "avg": 0.0
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 0.0,
+      "avg": 0.0
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 0.0,
+      "avg": 0.0
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 0.0,
+      "avg": 0.0
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 0.0,
+      "avg": 0.0
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 0.0,
+      "avg": 0.0
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 0.0,
+      "avg": 0.0
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 0.0,
+      "avg": 0.0
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 0.0,
+      "avg": 0.0
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 0.0,
+      "avg": 0.0
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 0.0,
+      "avg": 0.0
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 0.0,
+      "avg": 0.0
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 1.0,
+      "avg": 0.077
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 1.0,
+      "avg": 0.143
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 1.0,
+      "avg": 0.2
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 1.0,
+      "avg": 0.25
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 1.0,
+      "avg": 0.294
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 1.0,
+      "avg": 0.333
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 1.0,
+      "avg": 0.368
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 1.0,
+      "avg": 0.4
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 1.0,
+      "avg": 0.429
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 1.0,
+      "avg": 0.455
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 1.0,
+      "avg": 0.478
+    },
+    {
+      "t": "2026-07-28T11:32:32+00:00",
+      "score": 1.0,
+      "avg": 0.5
+    }
+  ],
+  "recommendations": [
+    {
+      "kind": "review",
+      "concept": "Structure Sentence",
+      "concept_id": "concept:structure-sentence",
+      "reason": "mastery 0.13 is below target",
+      "mastery": 0.125,
+      "resources": [
+        {
+          "resource_id": "nontechnical.eng.general.session-10-open-a-meeting-updated-2",
+          "title": "session-10-open-a-meeting-updated-2"
+        },
+        {
+          "resource_id": "nontechnical.eng.general.session-11-talk-about-tv-shows-and-movies-updated-1",
+          "title": "session-11-talk-about-tv-shows-and-movies-updated-1"
+        },
+        {
+          "resource_id": "nontechnical.eng.general.session-12-make-or-change-an-appointment-by-email-updated-2",
+          "title": "session-12-make-or-change-an-appointment-by-email-updated-2"
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "concept": "Probability Distribution",
+      "concept_id": "concept:probability-distribution",
+      "reason": "mastery 0.13 is below target",
+      "mastery": 0.134,
+      "resources": [
+        {
+          "resource_id": "technical.aiml.knowledge-basemachin.lecture4-data-data-manipulation",
+          "title": "lecture4-data-data-manipulation"
+        },
+        {
+          "resource_id": "technical.aiml.knowledge-basemachin.lecture9-svm",
+          "title": "lecture9-svm"
+        },
+        {
+          "resource_id": "technical.aiml.knowledge-basemachin.week05",
+          "title": "week05"
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "concept": "Optimizer",
+      "concept_id": "concept:optimizer",
+      "reason": "mastery 0.13 is below target",
+      "mastery": 0.134,
+      "resources": [
+        {
+          "resource_id": "nontechnical.eng.general.session-12-make-or-change-an-appointment-by-email-updated-2",
+          "title": "session-12-make-or-change-an-appointment-by-email-updated-2"
+        },
+        {
+          "resource_id": "technical.aiml.knowledge-basemachin.week12-neural-networks-lab-1-1",
+          "title": "week12-neural-networks-lab-1-1"
+        },
+        {
+          "resource_id": "technical.applied-dl.course-project.course-project-description",
+          "title": "course-project-description"
+        }
+      ]
+    },
+    {
+      "kind": "review",
+      "concept": "Random Variable",
+      "concept_id": "concept:random-variable",
+      "reason": "mastery 0.13 is below target",
+      "mastery": 0.134,
+      "resources": [
+        {
+          "resource_id": "technical.applied-stats.final-revision-all-r.continuous-distributions-revision-notes-s-ii-1",
+          "title": "continuous-distributions-revision-notes-s-ii-1"
+        },
+        {
+          "resource_id": "technical.applied-stats.knowledge-basemachin.probability-statistics-for-engineers-scientists-9th-edition",
+          "title": "probability-statistics-for-engineers-scientists-9th-edition"
+        },
+        {
+          "resource_id": "technical.applied-stats.knowledge-basemachin.probability-theory",
+          "title": "probability-theory"
+        }
+      ]
+    },
+    {
+      "kind": "explore",
+      "concept": "SQL Join",
+      "concept_id": "concept:sql-join",
+      "reason": "builds on your strong Clustering",
+      "mastery": 0.0,
+      "resources": [
+        {
+          "resource_id": "nontechnical.eng.general.session-12-make-or-change-an-appointment-by-email-updated-2",
+          "title": "session-12-make-or-change-an-appointment-by-email-updated-2"
+        },
+        {
+          "resource_id": "nontechnical.eng.general.session-2-introduce-yourself-and-others",
+          "title": "session-2-introduce-yourself-and-others"
+        },
+        {
+          "resource_id": "nontechnical.eng.general.session-21-make-suggestions-in-a-meeting",
+          "title": "session-21-make-suggestions-in-a-meeting"
+        }
+      ]
+    },
+    {
+      "kind": "explore",
+      "concept": "Data Preprocessing",
+      "concept_id": "concept:data-preprocessing",
+      "reason": "builds on your strong Activation Function",
+      "mastery": 0.0,
+      "resources": [
+        {
+          "resource_id": "technical.agentic-ai.w07.rag-lecture-week7",
+          "title": "rag-lecture-week7"
+        },
+        {
+          "resource_id": "technical.aiml.knowledge-basemachin.lecture3-introduction-to-ml",
+          "title": "lecture3-introduction-to-ml"
+        },
+        {
+          "resource_id": "technical.aiml.knowledge-basemachin.lecture4-data-data-manipulation",
+          "title": "lecture4-data-data-manipulation"
+        }
+      ]
+    },
+    {
+      "kind": "explore",
+      "concept": "Regression Analysis",
+      "concept_id": "concept:regression-analysis",
+      "reason": "builds on your strong Deep Learning",
+      "mastery": 0.0,
+      "resources": [
+        {
+          "resource_id": "technical.aiml.knowledge-basemachin.knn",
+          "title": "knn"
+        },
+        {
+          "resource_id": "technical.aiml.knowledge-basemachin.lecture3-introduction-to-ml",
+          "title": "lecture3-introduction-to-ml"
+        },
+        {
+          "resource_id": "technical.aiml.knowledge-basemachin.lecture6-knn",
+          "title": "lecture6-knn"
+        }
+      ]
+    }
+  ]
+}

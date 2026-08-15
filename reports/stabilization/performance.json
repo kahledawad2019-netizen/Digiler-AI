@@ -1,0 +1,95 @@
+{
+  "env": {
+    "python": "3.11.9"
+  },
+  "memory_mb": {
+    "baseline": 120.1,
+    "after_warmup": 1543.9,
+    "peak": 1557.6
+  },
+  "cold_start": {
+    "services_plus_retrieval_s": 31.45
+  },
+  "latency_ms": {
+    "health": {
+      "median": 0.6,
+      "mean": 1.0,
+      "p95": 1.6,
+      "min": 0.5,
+      "max": 7.2,
+      "n": 20
+    },
+    "knowledge/tree": {
+      "median": 31.5,
+      "mean": 31.8,
+      "p95": 33.4,
+      "min": 30.5,
+      "max": 33.5,
+      "n": 20
+    },
+    "graph/stats": {
+      "median": 7.6,
+      "mean": 9.1,
+      "p95": 8.6,
+      "min": 6.8,
+      "max": 38.5,
+      "n": 20
+    },
+    "dashboard": {
+      "median": 21.5,
+      "mean": 41.9,
+      "p95": 162.0,
+      "min": 19.9,
+      "max": 290.1,
+      "n": 20
+    },
+    "student": {
+      "median": 1.9,
+      "mean": 2.0,
+      "p95": 2.5,
+      "min": 1.7,
+      "max": 3.4,
+      "n": 20
+    },
+    "planner": {
+      "median": 3.6,
+      "mean": 3.8,
+      "p95": 4.6,
+      "min": 3.3,
+      "max": 4.7,
+      "n": 20
+    },
+    "search (retrieval)": {
+      "median": 109.2,
+      "mean": 108.3,
+      "p95": 134.7,
+      "min": 85.2,
+      "max": 144.6,
+      "n": 20
+    },
+    "citations (retrieval)": {
+      "median": 88.6,
+      "mean": 104.9,
+      "p95": 234.4,
+      "min": 67.5,
+      "max": 351.3,
+      "n": 20
+    },
+    "chat (GraphRAG)": {
+      "median": 103.9,
+      "mean": 105.7,
+      "p95": 138.0,
+      "min": 81.4,
+      "max": 164.3,
+      "n": 20
+    },
+    "agents/ask": {
+      "median": 82.5,
+      "mean": 80.6,
+      "p95": 85.4,
+      "min": 60.0,
+      "max": 136.6,
+      "n": 20
+    }
+  }
+}

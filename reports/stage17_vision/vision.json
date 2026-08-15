@@ -1,0 +1,24 @@
+{
+  "source_resources_scanned": 140,
+  "resources_with_figures": 23,
+  "n_figures": 1271,
+  "n_image_chunks": 283,
+  "by_kind": {
+    "figure": 134,
+    "chart": 36,
+    "table": 111,
+    "diagram": 2
+  },
+  "retrieval": {
+    "n": 60,
+    "hit@1": 0.7667,
+    "hit@3": 0.95,
+    "mrr": 0.8608
+  },
+  "mean_ingest_ms": 81.1,
+  "citation": {
+    "locator": "p.1",
+    "link": "file:///C:/Windows/Temp/ala_vision_nsnmfqea/raw/vision/figures/fig/technical-applied-dl-w01-practical-dl-lab1-1.figures.jsonl#page=1",
+    "resolvable": true
+  }
+}
